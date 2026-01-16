@@ -1,4 +1,10 @@
-FROM debian:bullseye-slim
+FROM --platform=linux/386 debian:buster-slim
+
+# Ajuste para usar o repositório Archive do Debian Buster
+RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list && \
+    sed -i 's|security.debian.org/debian-security|archive.debian.org/debian-security|g' /etc/apt/sources.list && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list && \
+    sed -i '/buster-updates/d' /etc/apt/sources.list
 
 # Argumentos de Versão
 ARG rehlds_build=3.13.0.788
@@ -10,39 +16,23 @@ ARG yapb_version=4.4.957
 ARG reunion_version=0.2.0.25
 
 # URLs
+ARG yapb_url=https://github.com/yapb/yapb/releases/download/${yapb_version}/yapb-${yapb_version}-linux.tar.xz
 ARG steamcmd_url=https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+ARG reunion_url=https://github.com/rehlds/ReUnion/releases/download/${reunion_version}/reunion-${reunion_version}.zip
 
 # Configurações de Ambiente
 ENV CPU_MHZ=2300
 ENV LANG=en_US.UTF-8
 
-# 1. Instalação de dependências e Suporte Multi-Arquitetura
-USER root
+# Dependências essenciais
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
+    libgcc1 \
     unzip \
     xz-utils \
     zip \
-    libx11-6 \
-    gnupg \
-    wget \
-    && arch=$(dpkg --print-architecture) \
-    && if [ "$arch" = "arm64" ]; then \
-         echo "Configurando ambiente ARM64 (Raspberry Pi)..." \
-         && dpkg --add-architecture i386 \
-         && dpkg --add-architecture armhf \
-         && wget https://itai-nelken.github.io/weekly-box86-debs/debian/box86.list -O /etc/apt/sources.list.d/box86.list \
-         && wget -qO- https://itai-nelken.github.io/weekly-box86-debs/debian/KEY.gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/box86-archive-keyring.gpg \
-         && apt-get update \
-         && apt-get install -y box86:armhf libc6:armhf libc6:i386 libstdc++6:i386 libgcc-s1:i386; \
-       else \
-         echo "Configurando ambiente AMD64 (PC)..." \
-         && dpkg --add-architecture i386 \
-         && apt-get update \
-         && apt-get install -y lib32gcc-s1 lib32stdc++6; \
-       fi \
-    && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/*
 
 # Criar usuário steam
 RUN groupadd -r steam && useradd -r -g steam -m -d /opt/steam steam
@@ -54,45 +44,31 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Script de instalação do HLDS
 COPY --chown=steam:steam ./lib/hlds.install /opt/steam
 
-# 2. SteamCMD + HLDS (Instalação do Jogo)
-# Executamos o binário diretamente se o script .sh falhar
+# 1. SteamCMD + HLDS (Motor Base)
 RUN curl -sL "$steamcmd_url" | tar xz \
-    && ./steamcmd.sh +runscript hlds.install \
-    || ./linux32/steamcmd +runscript hlds.install \
-    && rm -rf steamcmd.sh linux32 linux64
+ && ./steamcmd.sh +runscript hlds.install \
+ && rm steamcmd.sh
 
-# 3. ReHLDS (Binários do Servidor)
+# 2. ReHLDS (Binários do Servidor)
 RUN curl -sLJO https://github.com/dreamstalker/rehlds/releases/download/${rehlds_build}/rehlds-bin-${rehlds_build}.zip \
-    && unzip -o -j rehlds-bin-${rehlds_build}.zip "bin/linux32/*" -d hlds \
-    && unzip -o -j rehlds-bin-${rehlds_build}.zip "bin/linux32/valve/*" -d hlds \
-    && rm rehlds-bin-${rehlds_build}.zip
+ && unzip -o -j rehlds-bin-${rehlds_build}.zip "bin/linux32/*" -d hlds \
+ && unzip -o -j rehlds-bin-${rehlds_build}.zip "bin/linux32/valve/*" -d hlds \
+ && rm rehlds-bin-${rehlds_build}.zip
 
-# 4. Steam SDK fix
+# 3. Steam SDK fix
 RUN mkdir -p ~/.steam && ln -s /opt/steam/linux32 ~/.steam/sdk32
 
-# 5. Metamod-R
+# 4. Metamod-R (Core para Plugins)
 RUN mkdir -p hlds/cstrike/addons/metamod \
-    && curl -sLJO https://github.com/theAsmodai/metamod-r/releases/download/${metamod_version}/metamod-bin-${metamod_version}.zip \
-    && unzip -j metamod-bin-${metamod_version}.zip "addons/metamod/metamod*" -d hlds/cstrike/addons/metamod \
-    && rm metamod-bin-${metamod_version}.zip
+ && curl -sLJO https://github.com/theAsmodai/metamod-r/releases/download/${metamod_version}/metamod-bin-${metamod_version}.zip \
+ && unzip -j metamod-bin-${metamod_version}.zip "addons/metamod/metamod*" -d hlds/cstrike/addons/metamod \
+ && rm metamod-bin-${metamod_version}.zip
 
-# Copiar arquivos customizados (Mapas, configs, etc)
+# Copy cstrike
 COPY --chown=steam:steam ./cstrike /opt/steam/hlds/cstrike
 
 WORKDIR /opt/steam/hlds
 RUN chmod +x hlds_run hlds_linux && echo 10 > steam_appid.txt
 
-# 6. Entrypoint Inteligente (Detecta se precisa usar Box86)
-RUN echo $'#!/bin/bash\n\
-arch=$(dpkg --print-architecture)\n\
-if [ "$arch" = "arm64" ]; then\n\
-  echo "--- INICIANDO SERVIDOR VIA BOX86 (ARM64) ---"\n\
-  # Box86 traduz instruções x86 para ARM nativo\n\
-  exec box86 ./hlds_run "$@"\n\
-else\n\
-  echo "--- INICIANDO SERVIDOR NATIVAMENTE (AMD64) ---"\n\
-  exec ./hlds_run "$@"\n\
-fi' > /opt/steam/entrypoint.sh && chmod +x /opt/steam/entrypoint.sh
-
-ENTRYPOINT ["/opt/steam/entrypoint.sh"]
-CMD ["-game", "cstrike", "+map", "de_dust2", "+maxplayers", "16"]
+ENTRYPOINT ["./hlds_run", "-game", "cstrike"]
+CMD ["+map", "de_dust2", "+maxplayers", "16"]
