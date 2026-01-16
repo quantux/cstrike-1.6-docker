@@ -1,0 +1,10 @@
+maps/fy_ak47_s.bsp
+maps/fy_ak47_s.txt
+gfx/env/sunnybk.tga
+gfx/env/sunnydn.tga
+gfx/env/sunnyft.tga
+gfx/env/sunnylf.tga
+gfx/env/sunnyrt.tga
+gfx/env/sunnyup.tga
+models/S3B/flo_grass2.mdl
+fy_ak47_s.wad

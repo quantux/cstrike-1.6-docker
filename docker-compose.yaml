@@ -13,8 +13,5 @@ services:
       - "27015:27015"
       - "27015:27015/udp"
     volumes:
-      - ./cstrike/server.cfg:/opt/steam/hlds/cstrike/server.cfg
-      - ./cstrike/addons/yapb/conf/yapb.cfg:/opt/steam/hlds/cstrike/addons/yapb/conf/yapb.cfg
-      - ./cstrike/addons/yapb/data/:/opt/steam/hlds/cstrike/addons/yapb/data/
-      - ./cstrike/reunion.cfg:/opt/steam/hlds/cstrike/reunion.cfg
+      - ./cstrike:/opt/steam/hlds/cstrike
     command: ["+map", "de_dust2", "+maxplayers", "16"]

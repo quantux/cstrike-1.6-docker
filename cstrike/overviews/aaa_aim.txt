@@ -1,0 +1,14 @@
+// overview description file for aaa_aim.bsp
+
+global 
+{
+	ZOOM	3.97
+	ORIGIN	128 	-1.73	-80
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/aaa_aim.bmp"
+	HEIGHT	-417
+}

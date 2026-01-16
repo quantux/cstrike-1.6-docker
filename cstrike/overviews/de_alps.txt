@@ -1,0 +1,14 @@
+// overview description file for de_alps.bsp
+
+global 
+{
+	ZOOM	1.00
+	ORIGIN	504 	129	100
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/de_alps.bmp"
+	HEIGHT	-528
+}

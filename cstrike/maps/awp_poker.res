@@ -1,0 +1,11 @@
+maps/awp_poker.res
+maps/awp_poker.bsp
+maps/awp_poker.txt
+gfx/env/blackup.bmp
+gfx/env/blackdn.bmp
+gfx/env/blacklf.bmp
+gfx/env/blackrt.bmp
+gfx/env/blackft.bmp
+gfx/env/blackbk.bmp
+overviews/awp_poker.tga
+overviews/awp_poker.txt

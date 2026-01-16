@@ -1,0 +1,14 @@
+// overview description file for cs_bikini.bsp
+
+global 
+{
+	ZOOM	1.42
+	ORIGIN	272 	592.13	-424
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/cs_bikini.bmp"
+	HEIGHT	-424
+}

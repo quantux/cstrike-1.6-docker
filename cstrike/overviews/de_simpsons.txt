@@ -1,0 +1,15 @@
+// overview description file for de_simpsons.tga
+
+global
+{
+	ZOOM	1.39
+	ORIGIN	-122.75	-563.25	-1416
+	ROTATED	0
+}
+
+layer
+{
+	IMAGE "overviews/de_simpsons.tga"
+	HEIGHT	-1416
+}
+

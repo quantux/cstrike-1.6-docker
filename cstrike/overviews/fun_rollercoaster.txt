@@ -1,0 +1,14 @@
+// overview description file for fun_rollercoaster.bsp
+
+global 
+{
+	ZOOM	2.37
+	ORIGIN	-71.00 	 -80.00	   -318.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/fun_rollercoaster.bmp"
+	HEIGHT	-318.00
+}

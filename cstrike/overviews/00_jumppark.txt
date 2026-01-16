@@ -1,0 +1,14 @@
+// overview description file for 00_JumpPark.bsp
+
+global 
+{
+	ZOOM	2.39
+	ORIGIN	1120	-400	576
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/00_JumpPark.bmp"
+	HEIGHT	576
+}

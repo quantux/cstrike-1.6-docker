@@ -1,0 +1,8 @@
+~~~~~~~~~~~~~~~~~~~
+gg_dev_spikes
+~~~~~~~~~~~~~~~~~~~
+
+Made by: RANDOM.HERO
+Textures by VALVe
+
+Map designed for use with GunGame

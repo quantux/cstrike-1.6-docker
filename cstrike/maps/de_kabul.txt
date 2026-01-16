@@ -1,0 +1,14 @@
+Kabul - Bomb/Defuse
+
+By Oli (oli77@go2.pl)
+Textures by MacMan (MacManInfi@aol.com)
+
+Counter-Terrorists: Prevent Terrorists
+from bombing 
+Team members must defuse the bombs 
+
+
+Terrorists: The Terrorist carrying the
+C4 must destroy target
+
+(Press FIRE to continue)

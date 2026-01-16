@@ -1,0 +1,14 @@
+// fichier de description de l'overview de de_rats_theatre_v2.bsp
+
+global 
+{
+	ZOOM	2.05
+	ORIGIN	31.63 	-421.88	384.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/de_rats_theatre_v2.bmp"
+	HEIGHT	-385.00
+}

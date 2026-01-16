@@ -1,0 +1,14 @@
+// overview description file for de_algeria.bsp  (overview by [HAU]TOT - tot@counter-strike.de)
+
+global 
+{
+	ZOOM	1.34
+	ORIGIN	1680.00   -569.06   2519.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/de_algeria.bmp"
+	HEIGHT	2519.00
+}

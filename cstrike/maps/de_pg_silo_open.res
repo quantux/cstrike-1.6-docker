@@ -1,0 +1,10 @@
+maps/de_pg_silo_open.res 
+maps/de_pg_silo_open.txt
+gfx/env/rubblebk.tga
+gfx/env/rubbledn.tga
+gfx/env/rubbleft.tga
+gfx/env/rubblelf.tga
+gfx/env/rubblert.tga
+gfx/env/rubbleup.tga
+overviews/de_pg_silo_open.bmp
+overviews/de_pg_silo_open.txt

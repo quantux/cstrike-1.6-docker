@@ -1,0 +1,14 @@
+// overview description file for awp_city.bsp  (overview by [HAU]TOT - tot@counter-strike.de)
+
+global 
+{
+	ZOOM	2.39
+	ORIGIN	1280.00   1536.00   -65.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/awp_city.bmp"
+	HEIGHT	-65.00
+}

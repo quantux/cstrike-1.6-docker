@@ -1,0 +1,10 @@
+maps/gg_kumak_4FlwO.bsp
+maps/gg_kumak_4FlwO.txt
+maps/gg_kumak_4FlwO.res
+FlwO.wad
+gfx/env/lagunabk.tga
+gfx/env/lagunadn.tga
+gfx/env/lagunaft.tga
+gfx/env/lagunalf.tga
+gfx/env/lagunart.tga
+gfx/env/lagunaup.tga

@@ -1,0 +1,5 @@
+hlbsp: Error: Exceeded MAX_MAP_MODELS
+Description: The maximum number of brush based entities has been reached
+Howto Fix: Remove unnecessary brush entities, consolidate similar entities into a single entity
+
+

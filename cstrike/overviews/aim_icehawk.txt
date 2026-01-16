@@ -1,0 +1,14 @@
+// overview description file for aim_icehawk.bsp
+
+global 
+{
+	ZOOM	2.67
+	ORIGIN	0.00	0.00	-385.11
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/aim_icehawk.bmp"
+	HEIGHT	-385.11
+}

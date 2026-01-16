@@ -1,0 +1,14 @@
+// overview description file for de_lidl.bsp
+
+global 
+{
+	ZOOM	1.37
+	ORIGIN	704	896	128
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/de_lidl.bmp"
+	HEIGHT	0
+}

@@ -1,0 +1,14 @@
+// overview description file for as_evil.bsp
+
+global 
+{
+	ZOOM	1.50
+	ORIGIN	-128. 	-254.44	-833.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/as_evil.bmp"
+	HEIGHT	-833
+}

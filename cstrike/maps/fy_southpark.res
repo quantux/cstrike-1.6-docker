@@ -1,0 +1,11 @@
+gfx/env/southpark_bk.tga
+gfx/env/southpark_dn.tga
+gfx/env/southpark_ft.tga
+gfx/env/southpark_lf.tga
+gfx/env/southpark_rt.tga
+gfx/env/southpark_up.tga
+sound/fy_southpark/aspirateur.wav
+sound/fy_southpark/ericjvousaimelesmecs.wav
+sound/fy_southpark/kikifelecon.wav
+sound/fy_southpark/premierkimeur.wav
+sound/fy_southpark/vannesurgroscul.wav

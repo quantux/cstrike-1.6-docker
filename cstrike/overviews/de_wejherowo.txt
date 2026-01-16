@@ -1,0 +1,14 @@
+// overview description file for de_wejherowo.bsp
+
+global 
+{
+	ZOOM	2.67
+	ORIGIN	2347.63 	701.56	-568.50
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/de_wejherowo.tga"
+	HEIGHT	-1194.00
+}

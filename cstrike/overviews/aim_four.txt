@@ -1,0 +1,14 @@
+// overview description file for aim_four.bsp
+
+global 
+{
+	ZOOM	1.96
+	ORIGIN	0.00	64.00	-129
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/aim_four.bmp"
+	HEIGHT	-129
+}

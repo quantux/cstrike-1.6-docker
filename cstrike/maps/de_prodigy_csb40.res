@@ -1,0 +1,11 @@
+cstrike.wad
+decals.wad
+gfx/env/nightbk.tga
+gfx/env/nightdn.tga
+gfx/env/nightft.tga
+gfx/env/nightlf.tga
+gfx/env/nightrt.tga
+gfx/env/nightup.tga
+halflife.wad
+sound/ambience/industrial4.wav
+sound/ambience/wind1.wav

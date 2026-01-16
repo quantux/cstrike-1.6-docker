@@ -1,0 +1,14 @@
+// overview description file for de_aztec3.bsp by 828
+
+global 
+{
+	ZOOM	1.74
+	ORIGIN	163 	-822	-257
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/de_aztec3.bmp"
+	HEIGHT	-257
+}

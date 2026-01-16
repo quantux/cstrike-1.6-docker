@@ -1,0 +1,9 @@
+maps/tr_moving_targets.bsp
+maps/tr_moving_targets.txt
+gfx/env/sunnybk.tga
+gfx/env/sunnydn.tga
+gfx/env/sunnyft.tga
+gfx/env/sunnylf.tga
+gfx/env/sunnyrt.tga
+gfx/env/sunnyup.tga
+cible.wad

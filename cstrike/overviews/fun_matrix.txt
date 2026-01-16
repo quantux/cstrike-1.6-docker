@@ -1,0 +1,14 @@
+// overview description file for fun_matrix.bmp  (by DCR Dirk Conrad - the uPd4t3d Data)
+
+global 
+{
+	ZOOM	0.75
+	ORIGIN	152.00 88.00 248.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/fun_matrix.bmp"
+	HEIGHT	-769.0
+}

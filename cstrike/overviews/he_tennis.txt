@@ -1,0 +1,14 @@
+// overview description file for he_tennis.bsp  (overview by [HAU]TOT - tot@counter-strike.de)
+
+global 
+{
+	ZOOM	5.33
+	ORIGIN	-512.00   -320.00   -1.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/he_tennis.bmp"
+	HEIGHT	-1.00
+}

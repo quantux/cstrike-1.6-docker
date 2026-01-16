@@ -1,0 +1,5 @@
+Map made by {HK}Forgotten_00 in 2007
+
+dod_orange_bridge is a remake of dod_bsl/dod_orange
+
+map is made for 24 max players

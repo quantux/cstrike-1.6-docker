@@ -1,0 +1,11 @@
+maps/gg_crusoe_s.bsp
+maps/gg_crusoe_s.txt
+gfx/env/stabk.tga
+gfx/env/stadn.tga
+gfx/env/staft.tga
+gfx/env/stalf.tga
+gfx/env/start.tga
+gfx/env/staup.tga
+sound/ambience/fire3.wav
+sprites/flames.spr
+gg_crusoe_wad.wad

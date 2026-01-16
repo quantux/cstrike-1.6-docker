@@ -1,0 +1,28 @@
+de_rats_theatre - Bomb/Defuse
+By Christian " PtitLoup++ " Gruais
+(cgruais@fr.st)
+www.cgruais.fr.st
+
+
+Terroristes : Faites exploser votre C4
+sur la scene, ou dans la loge centrale.
+
+Anti-terroristes : Desamorcez toute bombe
+menaçant le theatre.
+
+Note : Soyez sur vos gardes. Il s'est longtemps
+joue des numeros de magie dans ce theatre.
+Il se pourrait qu'il réserve quelques surprises...
+
+
+--==-- Thanks --==--
+
+M@teo21 pour les tutoriaux WorldCraft
+Le_dede pour l'optimisation de la map
+
+
+--==-- Credits --==--
+
+Wood's textures are of Iikka Keranen
+Sky's textures comes from de_volare
+Other textures are of all and myself ;o)

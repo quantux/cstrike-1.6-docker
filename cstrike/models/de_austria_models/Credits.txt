@@ -1,0 +1,9 @@
+The following model files are taken from de_nakatomi:
+
+apfel.mdl
+charles.mdl
+souther.mdl
+
+by TheDoenerKing (TheDoenerKing@gmx.de)
+www.TheDoenerKing.de
+ICQ 51675840

@@ -1,0 +1,22 @@
+Chernobyl - Bomb/Defuse
+
+by KaLaSH (kalash-mapper@mail.ru)
+
+
+Counter-Terrorists: Prevent Terrorists
+from bombing the bombplace A or B.
+Team members must defuse any bombs 
+that threaten targeted areas.
+
+Terrorists: The Terrorist carrying the
+C4 must destroy one of the bombplaces.
+
+Other notes: There are 2 bombplaces on the map .
+
+www.kalash.tk
+www.cs-mapping.com.ua
+
+(Press FIRE to continue)
+
+
+

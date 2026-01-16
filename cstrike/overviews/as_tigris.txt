@@ -1,0 +1,14 @@
+// overview description file for as_tigris.bsp  (by Gimli)
+
+global 
+{
+	ZOOM	1.47
+	ORIGIN	-917.51   -1082.00	-388
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/as_tigris.bmp"
+	HEIGHT	-388
+}

@@ -1,0 +1,11 @@
+maps/de_cevo_russka.txt
+maps/de_cevo_russka.res
+models/de_cevo_russka/russka_tree_noleaves.mdl 
+gfx/env/snowup.tga
+gfx/env/snowlf.tga
+gfx/env/snowrt.tga
+gfx/env/snowdn.tga
+gfx/env/snowbk.tga
+gfx/env/snowft.tga
+overviews/de_cevo_russka.txt
+overviews/de_cevo_russka.bmp

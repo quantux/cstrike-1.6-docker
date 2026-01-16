@@ -1,0 +1,14 @@
+// Fichier de description de l'overview de de_dust_krystal578 
+
+global 
+{ 
+ZOOM 1.11 
+ORIGIN 506.50 937.44 144.00 
+ROTATED 0 
+} 
+
+layer 
+{ 
+IMAGE "overviews/de_dust_krystal578.bmp" 
+HEIGHT -225.00 
+}

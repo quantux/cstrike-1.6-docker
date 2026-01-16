@@ -1,0 +1,37 @@
+Trade Federation Battle Droids for Half-Life (3 of 3)
+-----------------------------------------------------
+
+Author:       	Simon Bursey - AKA NinjaSi
+
+Model Name:   	Commando Battle Droid
+Version:       	1.1
+Release Date:  	26 August 1999
+Total Size:  	351KB
+Polygons:     	748
+Vertices:     	405
+Texture Size:  	66KB
+Team Colors:   	Yes
+Animations:   	Modified the standard animations to cope with the body shape
+Build Time:    	2 weeks on and off for the 3 models. Extra day to add team colours.
+Programs Used:	3D Studio MAX R2.5, Photoshop 5, Quant 3.0, Paintshop Pro 5
+
+Known bugs:
+The joints at the top of the legs could do with modifying,
+The "fire 2 handed" animation is terrible, but I don't think it is used in the game anyway.
+
+Description:
+These are my first ever half life models based on the robots in 'Star Wars Episode 1: The Phantom Menace' (Copyright Lucasfilm Ltd, used without permission). The model has a fairly high polygon count due to the rigid joints. This colour changeable model has a lower resolution head texture than version 1.0, so some people may prefer the original.
+
+Installation:
+
+Model Files:    Put Bdroid_c.mdl and Bdroid_c.bmp int valve/models/player/Bdroid_c.
+
+Extras:
+
+Team Logo:      Put Bdroid_c_logo.bmp in your logos directory.
+Windows Cursor: Put Bdroid_busy.ani in your windows/cursors directory and set it up as the busy cursor (instead of the hourglass ).
+
+---------------------------------------------
+
+E-mail:	   simon.bursey@virgin.net
+Website:   http://freespace.virgin.net/simon.bursey

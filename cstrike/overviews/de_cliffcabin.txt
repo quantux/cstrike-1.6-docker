@@ -1,0 +1,14 @@
+
+global
+{
+	ZOOM	1.59
+	ORIGIN	64	1080	-816
+	ROTATED	0
+}
+
+layer
+{
+	IMAGE "overviews/de_cliffcabin.tga"
+	HEIGHT	-2049
+}
+

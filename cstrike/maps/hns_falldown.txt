@@ -1,0 +1,16 @@
+Map Created by Andreas B AKA HoppL'o's    24.11.2008
+-----------------------
+Max Players: 24
+------------------------------------------------------------------------------
+TIPS: high amount of airaccelerate = easy to surf on the flowers/hedges
+      low amount of airaccelerate = hard to surf on the flowers/hedges
+------------------------------------------------------------------------------
+This map is deisigned for a high amount of airaccelerate so you can jump from high heights down to a surf "wall" without dying. 
+In my opinion the gameplay gets better that way ;)
+-------------------
+Credits go to: - the guys on superjer.com for their great help and knowledge, without them hns_falldown wouldn't exist
+- And of course superjer.com for its great tutorial and forum:D
+------------------------------------------------------------------------------
+ONLY Distribute this map if you INCLUDE THIS FILE with NO modfications , and never pretend you are the author
+
+SEARCHING, SEEK AND DESTROY!!!

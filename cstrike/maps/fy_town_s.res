@@ -1,0 +1,12 @@
+maps/fy_town_s.bsp
+maps/fy_town_s.txt
+gfx/env/stonefieldbk.tga
+gfx/env/stonefielddn.tga
+gfx/env/stonefieldft.tga
+gfx/env/stonefieldlf.tga
+gfx/env/stonefieldrt.tga
+gfx/env/stonefieldup.tga
+models/S3B/arc_bush.mdl
+models/S3B/forge_tree1.mdl
+models/S3B/forge_tree3.mdl
+fy_town_s.wad

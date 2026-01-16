@@ -1,0 +1,9 @@
+maps/de_quakepalace.res
+maps/de_quakepalace.bsp
+maps/de_quakepalace.txt
+sound/quakepalace/drip1.wav
+sound/quakepalace/fire1.wav
+sound/quakepalace/r_tele2.wav
+sound/quakepalace/r_tele3.wav
+sound/quakepalace/swamp1.wav
+sound/quakepalace/wind2.wav

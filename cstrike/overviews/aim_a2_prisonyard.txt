@@ -1,0 +1,16 @@
+//overview description file for aim_a2_prisonyard
+//map by SadPuppy and Shizuka
+//http://addicted2.org/dungeon
+
+global
+{
+        ZOOM    1.09
+        ORIGIN  168.00    1012.00    -857.00
+        ROTATED 1
+}
+
+layer
+{
+        IMAGE   "overviews/aim_a2_prisonyard.tga"
+        HEIGHT  -857.00
+}

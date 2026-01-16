@@ -1,0 +1,16 @@
+// overview description file for cs_oldmansion.bsp by Mataleone
+// http://mataleone.counter-strike.com.br
+// Thanks to Rubones
+
+global 
+{
+	ZOOM	3.46
+	ORIGIN	-128 176 288
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/cs_oldmansion.bmp"
+	HEIGHT	-95
+}

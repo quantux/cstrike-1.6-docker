@@ -1,0 +1,125 @@
+hlcsg v3.4 Final (Feb 25 2006)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (amckern@yahoo.com)
+-----  BEGIN  hlcsg -----
+Command line: F:\PROGRA~1\VALVEH~1\KOMPIL~1\hlcsg.exe "F:\Program Files\Steam\steamapps\konradr25\counter-strike\cstrike_polish\maps\aim_piranesi_wall"
+Entering F:\Program Files\Steam\steamapps\konradr25\counter-strike\cstrike_polish\maps\aim_piranesi_wall.map
+
+Current hlcsg Settings
+Name                 |  Setting  |  Default
+---------------------|-----------|-------------------------
+threads               [       2 ] [  Varies ]
+verbose               [     off ] [     off ]
+log                   [      on ] [      on ]
+developer             [       0 ] [       0 ]
+chart                 [     off ] [     off ]
+estimate              [     off ] [     off ]
+max texture memory    [ 4194304 ] [ 4194304 ]
+max lighting memory   [ 6291456 ] [ 6291456 ]
+priority              [  Normal ] [  Normal ]
+
+noclip                [     off ] [     off ]
+null texture stripping[      on ] [      on ]
+clipnode economy mode [      on ] [      on ]
+clip hull type        [  legacy ] [  legacy ]
+onlyents              [     off ] [     off ]
+wadtextures           [      on ] [      on ]
+skyclip               [      on ] [      on ]
+hullfile              [    None ] [    None ]
+nullfile              [    None ] [    None ]
+min surface area      [   0.500 ] [   0.500 ]
+brush union threshold [   0.000 ] [   0.000 ]
+
+Using mapfile wad configuration
+Wadinclude list :
+[zhlt.wad]
+
+6 brushes (totalling 36 sides) discarded from clipping hulls
+CreateBrush:
+ (0.14 seconds)
+SetModelCenters:
+ (0.00 seconds)
+CSGBrush:
+ (0.52 seconds)
+
+Using Wadfile: \program files\steam\!tx\valve\halflife.wad
+ - Contains 3 used textures, 27.27 percent of map (3116 textures in wad)
+Using Wadfile: \program files\steam\!tx\valve\liquids.wad
+ - Contains 0 used textures, 0.00 percent of map (32 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\decals.wad
+ - Contains 0 used textures, 0.00 percent of map (225 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\cstrike.wad
+ - Contains 0 used textures, 0.00 percent of map (123 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\cs_assault.wad
+ - Contains 0 used textures, 0.00 percent of map (22 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\cs_dust.wad
+ - Contains 0 used textures, 0.00 percent of map (28 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\cs_office.wad
+ - Contains 0 used textures, 0.00 percent of map (102 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\de_aztec.wad
+ - Warning: Larger than expected texture (348972 bytes): 'SPECIAL_THANKS'
+ - Warning: Larger than expected texture (348972 bytes): 'THANKS'
+ - Contains 0 used textures, 0.00 percent of map (24 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\de_piranesi.wad
+ - Contains 6 used textures, 54.55 percent of map (160 textures in wad)
+Using Wadfile: \program files\steam\!tx\cstrike\cs_havana.wad
+ - Contains 1 used texture, 9.09 percent of map (122 textures in wad)
+
+Warning: More than 8 wadfiles are in use. (10)
+This may be harmless, and if no strange side effects are occurring, then
+it can safely be ignored. However, if your map starts exhibiting strange
+or obscure errors, consider this as suspect.
+
+
+Warning: ::FindTexture() texture NULL not found!
+Are you sure you included zhlt.wad in your wadpath list?
+Warning: ::LoadLump() texture NULL not found!
+Texture usage is at 0.32 mb (of 4.00 mb MAX)
+0.73 seconds elapsed
+
+-----   END   hlcsg -----
+
+
+
+hlbsp v3.4 Final (Feb 25 2006)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (amckern@yahoo.com)
+-----  BEGIN  hlbsp -----
+Command line: F:\PROGRA~1\VALVEH~1\KOMPIL~1\hlbsp.exe "F:\Program Files\Steam\steamapps\konradr25\counter-strike\cstrike_polish\maps\aim_piranesi_wall"
+
+Current hlbsp Settings
+Name               |  Setting  |  Default
+-------------------|-----------|-------------------------
+threads             [       2 ] [  Varies ]
+verbose             [     off ] [     off ]
+log                 [      on ] [      on ]
+developer           [       0 ] [       0 ]
+chart               [     off ] [     off ]
+estimate            [     off ] [     off ]
+max texture memory  [ 4194304 ] [ 4194304 ]
+priority            [  Normal ] [  Normal ]
+
+noclip              [     off ] [     off ]
+nofill              [     off ] [     off ]
+noopt               [     off ] [     off ]
+null tex. stripping [      on ] [      on ]
+notjunc             [     off ] [     off ]
+subdivide size      [     240 ] [     240 ] (Min 64) (Max 512)
+max node size       [    1024 ] [    1024 ] (Min 64) (Max 8192)
+
+
+SolidBSP [hull 0] 500...1000...1058 (0.16 seconds)
+BSP generation successful, writing portal file 'F:\Program Files\Steam\steamapps\konradr25\counter-strike\cstrike_polish\maps\aim_piranesi_wall.prt'
+SolidBSP [hull 1] 500...1000...1084 (0.14 seconds)
+SolidBSP [hull 2] 500...564 (0.03 seconds)
+SolidBSP [hull 3] 500...1000...1123 (0.17 seconds)
+1.41 seconds elapsed
+
+-----   END   hlbsp -----
+
+
+

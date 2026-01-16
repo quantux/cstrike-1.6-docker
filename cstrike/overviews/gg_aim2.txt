@@ -1,0 +1,13 @@
+
+global
+{
+	ZOOM    4.04
+	ORIGIN  632.00 -935.00 -615.00
+	ROTATED 0
+}
+
+layer
+{
+	IMAGE  "overviews/gg_aim2.bmp"
+	HEIGHT -1285.00
+}

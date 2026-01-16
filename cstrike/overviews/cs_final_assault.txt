@@ -1,0 +1,14 @@
+// overview description file for cs_final_assault.bsp
+
+global 
+{
+	ZOOM	1.58
+	ORIGIN	459.00 	-896.00	96.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/cs_final_assault.bmp"
+	HEIGHT	-321.00
+}

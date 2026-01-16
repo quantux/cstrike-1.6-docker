@@ -1,0 +1,13 @@
+models/uf2k/leiche_sitz.mdl
+models/props/bush_evergreen.mdl
+models/props/bush_shrub_little.mdl
+czcs_downed.wad
+czcs_office.wad
+czde_aztec.wad
+czde_cbble.wad
+czde_corruption.wad
+czde_dust.wad
+czde_inferno.wad
+czde_prodigy.wad
+czde_truth.wad
+czritual_standard.wad

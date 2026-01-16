@@ -1,0 +1,14 @@
+// overview description file for de_sahara.bsp
+
+global 
+{
+	ZOOM	1.23
+	ORIGIN	61 	-59	224
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/de_sahara.bmp"
+	HEIGHT	-200
+}

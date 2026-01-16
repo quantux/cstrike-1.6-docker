@@ -1,0 +1,24 @@
+ 
+                 ..:: aim_a2_prisonyard ::..
+
+This is an aim map for practising ak/colt. There are however other veapons for those who like to use them.
+
+There are 32 player spawns in the map, but we do not recommend using all of them since it will make it to crowded. We suggest no more than 16 players.
+
+Mapauthors: SadPuppy and Shizuka
+
+Please visit http://addicted2.org/dungeon for maps and downloads.
+
+Idle in #A2 @ Quakenet.
+
+Thanks to all those who have tested the map and given us ideas and inspiration <3
+
+Map objective:
+
+Terrorist kill all Counter Terrorist.
+
+Counter Terrorist kill all Terrorist.
+
+    
+
+         

@@ -1,0 +1,14 @@
+// overview description file for de_chernobyl.bsp by KaLaSH (kalash-mapper@mail.ru)
+
+global 
+{
+	ZOOM	1.25
+	ORIGIN	-494.33 -568.83 -432
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/de_chernobyl.bmp"
+	HEIGHT	-432
+}

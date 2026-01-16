@@ -1,0 +1,12 @@
+de_assault_upc
+remade by Big Brown Beaver
+(Counter Terrorist) Prevent the Terrorist
+for setting up the bomb in the computer 
+room.
+
+(Terrorists) Plant the bomb and try to 
+blow up the computer room.
+
+Additional notes:
+
+There are many places to hide.

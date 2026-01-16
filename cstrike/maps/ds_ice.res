@@ -1,0 +1,13 @@
+maps/ds_ice.bsp
+maps/ds_ice.txt
+maps/ds_ice.res
+models/ds/SnowDude.mdl
+sound/ds/WaterSplash.wav
+sound/ds/DaTune2008.wav
+sound/ds/Atmo0002.wav
+gfx/env/snowcliff_bk.tga
+gfx/env/snowcliff_ft.tga
+gfx/env/snowcliff_lf.tga
+gfx/env/snowcliff_rt.tga
+gfx/env/snowcliff_up.tga
+gfx/env/snowcliff_dn.tga

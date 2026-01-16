@@ -1,0 +1,51 @@
+L 01/16/2026 - 03:38:33: Log file started (file "logs/L0116003.log") (game "cstrike") (version "48/1.1.2.7/Stdio/3378")
+L 01/16/2026 - 03:38:37: "quantux<1><STEAM_0:1:101622284><>" connected, address "192.168.1.3:27005"
+L 01/16/2026 - 03:38:38: "peopleRpoop<2><BOT><>" entered the game
+L 01/16/2026 - 03:38:38: "peopleRpoop<2><BOT><>" joined team "CT"
+L 01/16/2026 - 03:38:38: "quantux<1><STEAM_0:1:101622284><>" STEAM USERID validated
+L 01/16/2026 - 03:38:38: "red devil<3><BOT><>" entered the game
+L 01/16/2026 - 03:38:38: "red devil<3><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 03:38:38: World triggered "Game_Commencing"
+L 01/16/2026 - 03:38:38: World triggered "Game_Commencing" (CT "0") (T "0")
+L 01/16/2026 - 03:38:38: World triggered "Round_End"
+L 01/16/2026 - 03:38:39: "cG PHAXD<4><BOT><>" entered the game
+L 01/16/2026 - 03:38:39: "cG PHAXD<4><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 03:38:39: "gixsir1000<5><BOT><>" entered the game
+L 01/16/2026 - 03:38:39: "gixsir1000<5><BOT><>" joined team "CT"
+L 01/16/2026 - 03:38:39: "quantux<1><STEAM_0:1:101622284><>" entered the game
+L 01/16/2026 - 03:38:39: "Killer apple<6><BOT><>" entered the game
+L 01/16/2026 - 03:38:39: "Killer apple<6><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 03:38:40: "quantux<1><STEAM_0:1:101622284><>" joined team "TERRORIST"
+L 01/16/2026 - 03:38:40: "articwolf<7><BOT><>" entered the game
+L 01/16/2026 - 03:38:40: "articwolf<7><BOT><>" joined team "CT"
+L 01/16/2026 - 03:38:40: "Ronin Marmot<8><BOT><>" entered the game
+L 01/16/2026 - 03:38:40: "Ronin Marmot<8><BOT><>" joined team "CT"
+L 01/16/2026 - 03:38:41: "The Muffin Man<9><BOT><>" entered the game
+L 01/16/2026 - 03:38:41: "The Muffin Man<9><BOT><>" joined team "CT"
+L 01/16/2026 - 03:38:41: "bunkerking111<10><BOT><>" entered the game
+L 01/16/2026 - 03:38:41: "bunkerking111<10><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 03:38:41: "quantux<1><STEAM_0:1:101622284><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/16/2026 - 03:38:44: World triggered "Round_Start"
+L 01/16/2026 - 03:38:58: "peopleRpoop<2><BOT><CT>" killed "quantux<1><STEAM_0:1:101622284><TERRORIST>" with "usp"
+L 01/16/2026 - 03:38:58: "quantux<1><STEAM_0:1:101622284><TERRORIST>" triggered "Dropped_The_Bomb"
+L 01/16/2026 - 03:38:59: "bunkerking111<10><BOT><TERRORIST>" killed "peopleRpoop<2><BOT><CT>" with "glock18"
+L 01/16/2026 - 03:39:00: "quantux<1><STEAM_0:1:101622284><TERRORIST>" disconnected
+L 01/16/2026 - 03:39:01: "bunkerking111<10><BOT><TERRORIST>" triggered "Got_The_Bomb"
+L 01/16/2026 - 03:39:10: "articwolf<7><BOT><CT>" killed "bunkerking111<10><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 03:39:10: "bunkerking111<10><BOT><TERRORIST>" triggered "Dropped_The_Bomb"
+L 01/16/2026 - 03:39:16: "red devil<3><BOT><TERRORIST>" killed "articwolf<7><BOT><CT>" with "usp"
+L 01/16/2026 - 03:39:21: "Ronin Marmot<8><BOT><CT>" killed "Killer apple<6><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 03:39:22: "Ronin Marmot<8><BOT><CT>" killed "red devil<3><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 03:39:31: "Ronin Marmot<8><BOT><CT>" killed "cG PHAXD<4><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 03:39:31: Team "CT" triggered "CTs_Win" (CT "1") (T "0")
+L 01/16/2026 - 03:39:31: World triggered "Round_End"
+L 01/16/2026 - 03:39:36: "cG PHAXD<4><BOT><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/16/2026 - 03:39:39: World triggered "Round_Start"
+L 01/16/2026 - 03:39:54: "peopleRpoop<2><BOT><CT>" killed "bunkerking111<10><BOT><TERRORIST>" with "aug"
+L 01/16/2026 - 03:39:56: "Ronin Marmot<8><BOT><CT>" killed "red devil<3><BOT><TERRORIST>" with "aug"
+L 01/16/2026 - 03:40:06: "gixsir1000<5><BOT><CT>" killed "Killer apple<6><BOT><TERRORIST>" with "m4a1"
+L 01/16/2026 - 03:40:14: "cG PHAXD<4><BOT><TERRORIST>" triggered "Planted_The_Bomb"
+L 01/16/2026 - 03:40:19: "cG PHAXD<4><BOT><TERRORIST>" killed "articwolf<7><BOT><CT>" with "glock18"
+L 01/16/2026 - 03:40:20: "Ronin Marmot<8><BOT><CT>" killed "cG PHAXD<4><BOT><TERRORIST>" with "aug"
+L 01/16/2026 - 03:40:27: "Ronin Marmot<8><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
+L 01/16/2026 - 03:40:32: 

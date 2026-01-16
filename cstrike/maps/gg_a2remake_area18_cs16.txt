@@ -1,0 +1,17 @@
+ 
+              ..:: gg_a2remake_area18_cs16 ::..
+
+We have, while running our gungame server, found lots of good maps regarding gameplay. Unfortunately some of them had bugs that needed to be fixed. Some had the spawns to close together causing people to spawn into eachother, losing levels due to that. Some had problems with lag because of leaks or the whole map was func_walled. Others are 1.6 remakes from source maps.
+
+We took those maps and fixed the bugs. But we couldn't resist touching up textures and sometimes adding something to the map.They are renamed to fit the new theme. There are 32 player spawns in all maps.
+
+Map authors: SadPuppy and Shizuka
+
+Please visit http://addicted2.org/dungeon for maps and downloads. Idle in #A2 @ Quakenet.
+
+Thanks to all those who have tested the map and given us ideas and inspiration <3 
+Thanks to the original authors for creating such good maps regarding gameplay <3
+
+    
+
+         

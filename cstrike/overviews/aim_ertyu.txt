@@ -1,0 +1,14 @@
+// overview description file for aim_ertyu.bsp
+
+global 
+{
+	ZOOM	2.00
+	ORIGIN	0.00    -288.00   220.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/aim_ertyu.bmp"
+	HEIGHT	-73.00
+}
