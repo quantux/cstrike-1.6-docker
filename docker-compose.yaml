@@ -1,7 +1,7 @@
 services:
   cs-server:
     user: "1000:1000"
-    image: cstrike-1.6-docker:latest
+    image: quantux1/cstrike-1.6-docker:latest
     container_name: cstrike-1.6-docker
     restart: unless-stopped
     stdin_open: true
