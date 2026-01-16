@@ -1,9 +1,6 @@
 services:
   cs-server:
     user: "1000:1000"
-    build:
-      context: .
-      dockerfile: Dockerfile
     image: cstrike-1.6-docker:latest
     container_name: cstrike-1.6-docker
     restart: unless-stopped
