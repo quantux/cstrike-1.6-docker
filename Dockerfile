@@ -7,16 +7,18 @@ ARG amxmod_version=1.8.2
 ARG regamedll_version=5.26.0.668
 ARG reapi_version=5.24.0.300
 ARG yapb_version=4.4.957
+ARG reunion_version=0.2.0.25
 
 # URLs
 ARG yapb_url=https://github.com/yapb/yapb/releases/download/${yapb_version}/yapb-${yapb_version}-linux.tar.xz
 ARG steamcmd_url=https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+ARG reunion_url=https://github.com/rehlds/ReUnion/releases/download/${reunion_version}/reunion-${reunion_version}.zip
 
 # Configurações de Ambiente
 ENV CPU_MHZ=2300
 ENV LANG=en_US.UTF-8
 
-# Dependências essenciais (removido pacotes de compilação desnecessários)
+# Dependências essenciais
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
@@ -41,7 +43,7 @@ RUN curl -sL "$steamcmd_url" | tar xz \
  && ./steamcmd.sh +runscript hlds.install \
  && rm steamcmd.sh
 
-# 2. ReHLDS (Baixa, extrai e remove o zip)
+# 2. ReHLDS
 RUN curl -sLJO https://github.com/dreamstalker/rehlds/releases/download/${rehlds_build}/rehlds-bin-${rehlds_build}.zip \
  && unzip -o -j rehlds-bin-${rehlds_build}.zip "bin/linux32/*" -d hlds \
  && unzip -o -j rehlds-bin-${rehlds_build}.zip "bin/linux32/valve/*" -d hlds \
@@ -57,28 +59,36 @@ RUN mkdir -p hlds/cstrike/addons/metamod \
  && rm metamod-bin-${metamod_version}.zip \
  && sed -i 's|dlls/cs.so|addons/metamod/metamod_i386.so|' hlds/cstrike/liblist.gam
 
-# 5. AMX Mod X
+# 5. ReUnion (Instalação e ativação no topo do plugins.ini)
+RUN mkdir -p hlds/cstrike/addons/reunion \
+ && curl -sLJO "$reunion_url" \
+ && unzip -o "reunion-${reunion_version}.zip" -d reunion_temp \
+ && find reunion_temp -name "reunion_mm_i386.so" -exec cp {} hlds/cstrike/addons/reunion/ \; \
+ && rm -rf reunion_temp "reunion-${reunion_version}.zip" \
+ && echo 'linux addons/reunion/reunion_mm_i386.so' > hlds/cstrike/addons/metamod/plugins.ini
+
+# 6. AMX Mod X (Append no plugins.ini)
 RUN curl -sL http://www.amxmodx.org/release/amxmodx-${amxmod_version}-base-linux.tar.gz | tar -xz -C hlds/cstrike \
  && echo 'linux addons/amxmodx/dlls/amxmodx_mm_i386.so' >> hlds/cstrike/addons/metamod/plugins.ini \
  && cat hlds/cstrike/mapcycle.txt >> hlds/cstrike/addons/amxmodx/configs/maps.ini
 
-# 6. ReGameDLL
+# 7. ReGameDLL
 RUN curl -sLJO https://github.com/s1lentq/ReGameDLL_CS/releases/download/${regamedll_version}/regamedll-bin-${regamedll_version}.zip \
  && unzip -o -j regamedll-bin-${regamedll_version}.zip "bin/linux32/cstrike/*" -d hlds/cstrike \
  && unzip -o -j regamedll-bin-${regamedll_version}.zip "bin/linux32/cstrike/dlls/*" -d hlds/cstrike/dlls \
  && rm regamedll-bin-${regamedll_version}.zip
 
-# 7. ReAPI
+# 8. ReAPI
 RUN curl -sLJO https://github.com/s1lentq/reapi/releases/download/${reapi_version}/reapi-bin-${reapi_version}.zip \
  && unzip -o reapi-bin-${reapi_version}.zip -d hlds/cstrike \
  && rm reapi-bin-${reapi_version}.zip \
  && echo 'reapi' >> hlds/cstrike/addons/amxmodx/configs/modules.ini
 
-# 8. YaPB (BOTS)
+# 9. YaPB (BOTS)
 RUN curl -sL "$yapb_url" | tar -xJ -C hlds/cstrike \
  && echo 'linux addons/yapb/bin/yapb.so' >> hlds/cstrike/addons/metamod/plugins.ini
 
-# 9. GARANTIR PERMISSÕES (Executar por último antes do WORKDIR final)
+# 10. Permissões finais
 USER root
 RUN mkdir -p /opt/steam/hlds/cstrike/addons/yapb/data/train && \
     chown -R steam:steam /opt/steam/hlds/cstrike/addons/yapb/data/ && \
@@ -87,7 +97,6 @@ USER steam
 
 WORKDIR /opt/steam/hlds
 
-# Finalização
 RUN chmod +x hlds_run hlds_linux && echo 10 > steam_appid.txt
 
 ENTRYPOINT ["./hlds_run", "-game", "cstrike"]
