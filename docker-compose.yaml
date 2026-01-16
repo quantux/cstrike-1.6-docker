@@ -1,0 +1,19 @@
+services:
+  cs-server:
+    user: "1000:1000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cstrike-1.6-docker:latest
+    container_name: cstrike-1.6-docker
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "27015:27015"
+      - "27015:27015/udp"
+    volumes:
+      - ./cstrike/server.cfg:/opt/steam/hlds/cstrike/server.cfg
+      - ./cstrike/addons/yapb/conf/yapb.cfg:/opt/steam/hlds/cstrike/addons/yapb/conf/yapb.cfg
+      - ./cstrike/addons/yapb/data/:/opt/steam/hlds/cstrike/addons/yapb/data/
+    command: ["+map", "de_dust2", "+maxplayers", "16"]
