@@ -1,0 +1,93 @@
+L 01/16/2026 - 05:13:50: Log file started (file "logs/L0116004.log") (game "cstrike") (version "48/1.1.2.7/Stdio/3378")
+L 01/16/2026 - 05:13:55: "peopleRpoop<1><BOT><>" entered the game
+L 01/16/2026 - 05:13:55: "peopleRpoop<1><BOT><>" joined team "CT"
+L 01/16/2026 - 05:13:55: "red devil<2><BOT><>" entered the game
+L 01/16/2026 - 05:13:55: "red devil<2><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 05:13:55: World triggered "Game_Commencing"
+L 01/16/2026 - 05:13:55: World triggered "Game_Commencing" (CT "0") (T "0")
+L 01/16/2026 - 05:13:55: World triggered "Round_End"
+L 01/16/2026 - 05:13:56: "cG PHAXD<3><BOT><>" entered the game
+L 01/16/2026 - 05:13:56: "cG PHAXD<3><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 05:13:56: "quantux<4><STEAM_0:1:101622284><>" connected, address "192.168.1.3:27005"
+L 01/16/2026 - 05:13:56: "gixsir1000<5><BOT><>" entered the game
+L 01/16/2026 - 05:13:56: "gixsir1000<5><BOT><>" joined team "CT"
+L 01/16/2026 - 05:13:57: "-CARDIAC-<6><BOT><>" entered the game
+L 01/16/2026 - 05:13:57: "-CARDIAC-<6><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 05:13:57: "Counter123<7><BOT><>" entered the game
+L 01/16/2026 - 05:13:57: "Counter123<7><BOT><>" joined team "CT"
+L 01/16/2026 - 05:13:57: "intangible<8><BOT><>" entered the game
+L 01/16/2026 - 05:13:57: "intangible<8><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 05:13:58: "quantux<4><STEAM_0:1:101622284><>" entered the game
+L 01/16/2026 - 05:13:58: "ksqueakj<9><BOT><>" entered the game
+L 01/16/2026 - 05:13:58: "ksqueakj<9><BOT><>" joined team "CT"
+L 01/16/2026 - 05:13:58: "Wangmaste<10><BOT><>" entered the game
+L 01/16/2026 - 05:13:58: "Wangmaste<10><BOT><>" joined team "TERRORIST"
+L 01/16/2026 - 05:13:58: "quantux<4><STEAM_0:1:101622284><>" joined team "TERRORIST"
+L 01/16/2026 - 05:13:58: "red devil<2><BOT><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/16/2026 - 05:14:01: World triggered "Round_Start"
+L 01/16/2026 - 05:14:22: "Wangmaste<10><BOT><TERRORIST>" killed "peopleRpoop<1><BOT><CT>" with "glock18"
+L 01/16/2026 - 05:14:25: "-CARDIAC-<6><BOT><TERRORIST>" killed "ksqueakj<9><BOT><CT>" with "usp"
+L 01/16/2026 - 05:14:34: Rcon: "rcon 1364905700 "admin123" yb_chat 1" from "192.168.1.3:27005"
+L 01/16/2026 - 05:14:36: "peopleRpoop<1><BOT><CT>" say "I had to reload and he shot me in the head!" (dead)
+L 01/16/2026 - 05:14:40: "gixsir1000<5><BOT><CT>" killed "Wangmaste<10><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 05:14:42: "Wangmaste<10><BOT><TERRORIST>" say "Insane in the membrane, hehe!" (dead)
+L 01/16/2026 - 05:14:43: "-CARDIAC-<6><BOT><TERRORIST>" killed "gixsir1000<5><BOT><CT>" with "usp"
+L 01/16/2026 - 05:14:43: Rcon: "rcon 1364905700 "admin123" yb chat 1" from "192.168.1.3:27005"
+L 01/16/2026 - 05:14:45: "gixsir1000<5><BOT><CT>" say "My handwrist already hurts..." (dead)
+L 01/16/2026 - 05:14:46: Rcon: "rcon 1364905700 "admin123" yb " from "192.168.1.3:27005"
+L 01/16/2026 - 05:14:50: "red devil<2><BOT><TERRORIST>" triggered "Planted_The_Bomb"
+L 01/16/2026 - 05:14:50: "Counter123<7><BOT><CT>" say "Jeeesuzzz Christ, not again!"
+L 01/16/2026 - 05:14:50: "Wangmaste<10><BOT><TERRORIST>" say "If botman is cool, what is TheFatal then?" (dead)
+L 01/16/2026 - 05:14:51: "Counter123<7><BOT><CT>" killed "intangible<8><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 05:14:52: "Counter123<7><BOT><CT>" say "I had to do it, intangible. You understand."
+L 01/16/2026 - 05:14:55: "gixsir1000<5><BOT><CT>" say "I wonder when HPB-Bot will be finished..." (dead)
+L 01/16/2026 - 05:14:55: "peopleRpoop<1><BOT><CT>" say "00:53 in the round and i'm already spectating :(" (dead)
+L 01/16/2026 - 05:14:55: Rcon: "rcon 1364905700 "admin123" yb show_custom" from "192.168.1.3:27005"
+L 01/16/2026 - 05:14:58: "ksqueakj<9><BOT><CT>" say "What teh heck are you talkin' about, peopleRpoop?" (dead)
+L 01/16/2026 - 05:14:59: "intangible<8><BOT><TERRORIST>" say "Spectating sucks..." (dead)
+L 01/16/2026 - 05:15:02: "ksqueakj<9><BOT><CT>" say "Oh, really?" (dead)
+L 01/16/2026 - 05:15:03: "ksqueakj<9><BOT><CT>" say "I really hate de_dust2 :(" (dead)
+L 01/16/2026 - 05:15:06: "Wangmaste<10><BOT><TERRORIST>" say "Why is everybody always saying the same things???" (dead)
+L 01/16/2026 - 05:15:08: "peopleRpoop<1><BOT><CT>" say "Are there Bots in this Game?" (dead)
+L 01/16/2026 - 05:15:08: "Counter123<7><BOT><CT>" killed "quantux<4><STEAM_0:1:101622284><TERRORIST>" with "usp"
+L 01/16/2026 - 05:15:08: "Counter123<7><BOT><CT>" say "You are nothing, quantux. Nothing at all."
+L 01/16/2026 - 05:15:12: "intangible<8><BOT><TERRORIST>" say "Bots, all the time bots - you should start playing with humans." (dead)
+L 01/16/2026 - 05:15:12: "gixsir1000<5><BOT><CT>" say "Do you know Jumobt? It really kicks Ass!" (dead)
+L 01/16/2026 - 05:15:15: Rcon: "rcon 1364905700 "admin123" yb graphmenu" from "192.168.1.3:27005"
+L 01/16/2026 - 05:15:16: "intangible<8><BOT><TERRORIST>" say "It makes me sick to look at those Fools" (dead)
+L 01/16/2026 - 05:15:19: "ksqueakj<9><BOT><CT>" say "huh? wtf?" (dead)
+L 01/16/2026 - 05:15:20: "Wangmaste<10><BOT><TERRORIST>" say "Botman must be such a cool guy..." (dead)
+L 01/16/2026 - 05:15:24: "ksqueakj<9><BOT><CT>" say "I wonder when HPB-Bot will be finished..." (dead)
+L 01/16/2026 - 05:15:24: "peopleRpoop<1><BOT><CT>" say "I bet Counter123 won't make it through the round" (dead)
+L 01/16/2026 - 05:15:25: Team "TERRORIST" triggered "Target_Bombed" (CT "0") (T "1")
+L 01/16/2026 - 05:15:25: World triggered "Round_End"
+L 01/16/2026 - 05:15:28: "intangible<8><BOT><TERRORIST>" say "Have you got ICQ, peoplerpoop?" (dead)
+L 01/16/2026 - 05:15:28: "gixsir1000<5><BOT><CT>" say "that looked painful." (dead)
+L 01/16/2026 - 05:15:30: "Wangmaste<10><BOT><TERRORIST>" joined team "CT" (auto)
+L 01/16/2026 - 05:15:30: "cG PHAXD<3><BOT><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/16/2026 - 05:15:30: "intangible<8><BOT><TERRORIST>" say "Wazzzzup?"
+L 01/16/2026 - 05:15:33: World triggered "Round_Start"
+L 01/16/2026 - 05:15:34: Rcon: "rcon 1364905700 "admin123" yb menu" from "192.168.1.3:27005"
+L 01/16/2026 - 05:15:47: Rcon: "rcon 1364905700 "admin123" yb_chat 1" from "192.168.1.3:27005"
+L 01/16/2026 - 05:15:49: Rcon: "rcon 1364905700 "admin123" yb_chat 0" from "192.168.1.3:27005"
+L 01/16/2026 - 05:15:50: "cG PHAXD<3><BOT><TERRORIST>" killed "gixsir1000<5><BOT><CT>" with "ak47"
+L 01/16/2026 - 05:15:51: "-CARDIAC-<6><BOT><TERRORIST>" killed "ksqueakj<9><BOT><CT>" with "knife"
+L 01/16/2026 - 05:15:53: "Counter123<7><BOT><CT>" killed "-CARDIAC-<6><BOT><TERRORIST>" with "usp"
+L 01/16/2026 - 05:15:56: "red devil<2><BOT><TERRORIST>" killed "Counter123<7><BOT><CT>" with "ak47"
+L 01/16/2026 - 05:15:58: "quantux<4><STEAM_0:1:101622284><TERRORIST>" killed "peopleRpoop<1><BOT><CT>" with "sg552"
+L 01/16/2026 - 05:16:04: Rcon: "rcon 1364905700 "admin123" yb_chat 1" from "192.168.1.3:27005"
+L 01/16/2026 - 05:16:04: "gixsir1000<5><BOT><CT>" say "You said somethin', intangible?" (dead)
+L 01/16/2026 - 05:16:04: "ksqueakj<9><BOT><CT>" say "I wish someone good would join the server." (dead)
+L 01/16/2026 - 05:16:08: "Counter123<7><BOT><CT>" say "I'm alwasy on this Server" (dead)
+L 01/16/2026 - 05:16:09: "peopleRpoop<1><BOT><CT>" say "I believe this Server's got a good Map Rotation" (dead)
+L 01/16/2026 - 05:16:10: "intangible<8><BOT><TERRORIST>" killed "Wangmaste<10><BOT><CT>" with "ak47"
+L 01/16/2026 - 05:16:10: Team "TERRORIST" triggered "Terrorists_Win" (CT "0") (T "2")
+L 01/16/2026 - 05:16:10: World triggered "Round_End"
+L 01/16/2026 - 05:16:12: "gixsir1000<5><BOT><CT>" say "Too bad NNBot is discontinued..." (dead)
+L 01/16/2026 - 05:16:13: "-CARDIAC-<6><BOT><TERRORIST>" say "Dd one of the bots get stuck already??" (dead)
+L 01/16/2026 - 05:16:15: "quantux<4><STEAM_0:1:101622284><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/16/2026 - 05:16:18: World triggered "Round_Start"
+L 01/16/2026 - 05:16:28: Rcon: "rcon 1364905700 "admin123" yb_chat 1" from "192.168.1.3:27005"
+L 01/16/2026 - 05:16:34: Rcon: "rcon 1364905700 "admin123" yb menu" from "192.168.1.3:27005"
+L 01/16/2026 - 05:16:39: "intangible<8><BOT><TERRORIST>" killed "peopleRpoop<1><BOT><CT>" with "ak47"
+L 01/16/2026 - 05:16:39: Rcon: "rcon 1364905700 "admin123" yb menu" from 
