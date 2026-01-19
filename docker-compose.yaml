@@ -1,6 +1,5 @@
 services:
   cs-server:
-    user: "1000:1000"
     image: quantux1/cstrike-1.6-docker:latest
     container_name: cstrike-1.6-docker
     restart: unless-stopped
@@ -10,6 +9,6 @@ services:
       - "27015:27015"
       - "27015:27015/udp"
     volumes:
-      - ./cstrike:/opt/steam/hlds/cstrike
       - ./server.cfg:/opt/steam/hlds/cstrike/server.cfg
+      - ./cstrike:/opt/steam/hlds/cstrike
     command: ["+map", "de_dust2", "+maxplayers", "16"]
