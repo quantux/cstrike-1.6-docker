@@ -4,6 +4,7 @@ FROM --platform=linux/386 debian:bookworm-slim
 # Dependências mínimas
 # ===============================
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
     unzip \
     xz-utils \
     tar \
