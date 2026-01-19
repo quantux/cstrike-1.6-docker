@@ -10,5 +10,6 @@ services:
       - "27015:27015"
       - "27015:27015/udp"
     volumes:
+      - ./cstrike:/opt/steam/hlds/cstrike
       - ./server.cfg:/opt/steam/hlds/cstrike/server.cfg
     command: ["+map", "de_dust2", "+maxplayers", "16"]

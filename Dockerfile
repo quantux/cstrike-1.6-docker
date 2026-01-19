@@ -64,9 +64,6 @@ RUN mkdir -p hlds/cstrike/addons/metamod \
  && unzip -j metamod-bin-${metamod_version}.zip "addons/metamod/metamod*" -d hlds/cstrike/addons/metamod \
  && rm metamod-bin-${metamod_version}.zip
 
-# Copy cstrike
-COPY --chown=steam:steam ./cstrike /opt/steam/hlds/cstrike
-
 WORKDIR /opt/steam/hlds
 RUN chmod +x hlds_run hlds_linux && echo 10 > steam_appid.txt
 
