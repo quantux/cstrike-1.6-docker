@@ -2,7 +2,7 @@
 ### Para rodar o projeto:
 Clonar com: <br>
 git clone https://github.com/quantux/cstrike-1.6-docker
-<br>
+<br><br>
 Rodar com: <br>
 docker compose up -d
 
