@@ -1,9 +1,9 @@
 # Servidor Docker de CS 1.6
-Para rodar o projeto:
-1. Clonar com:
-  - git clone https://github.com/quantux/cstrike-1.6-docker
-2. Rodar com:
-  - docker compose up -d
+### Para rodar o projeto:
+- Clonar com:
+  git clone https://github.com/quantux/cstrike-1.6-docker
+- Rodar com:
+  docker compose up -d
 
 ### Ao iniciar o jogo, coloque a senha e entre no server:
 password ggwp
