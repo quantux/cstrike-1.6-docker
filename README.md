@@ -6,8 +6,8 @@
   docker compose up -d
 
 ### Ao iniciar o jogo, coloque a senha e entre no server:
-password ggwp
-connect <ip>
+password ggwp<br>
+connect [ip]
 
 ### Para gerenciar o servidor:
   - rcon_password admin123
