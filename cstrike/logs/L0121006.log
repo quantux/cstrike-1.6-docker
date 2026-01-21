@@ -1,0 +1,80 @@
+L 01/21/2026 - 18:42:37: Log file started (file "logs/L0121006.log") (game "cstrike") (version "48/1.1.2.7/Stdio/4002")
+L 01/21/2026 - 18:42:43: "quantux<1><STEAM_0:1:101622284><>" connected, address "192.168.1.3:27005"
+L 01/21/2026 - 18:42:44: World triggered "Round_Start"
+L 01/21/2026 - 18:42:45: "quantux<1><STEAM_0:1:101622284><>" entered the game
+L 01/21/2026 - 18:42:46: "quantux<1><STEAM_0:1:101622284><>" joined team "TERRORIST"
+L 01/21/2026 - 18:42:46: "quantux<1><STEAM_0:1:101622284><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/21/2026 - 18:43:01: Rcon: "rcon 75346866 "admin123" yb difficulty" from "192.168.1.3:27005"
+L 01/21/2026 - 18:43:08: Rcon: "rcon 75346866 "admin123" yb difficulty" from "192.168.1.3:27005"
+L 01/21/2026 - 18:43:19: Rcon: "rcon 75346866 "admin123" yb_difficulty" from "192.168.1.3:27005"
+L 01/21/2026 - 18:43:51: Rcon: "rcon 75346866 "admin123" yb_difficulty" from "192.168.1.3:27005"
+L 01/21/2026 - 18:43:56: Rcon: "rcon 75346866 "admin123" yb_difficulty 1" from "192.168.1.3:27005"
+L 01/21/2026 - 18:43:57: Rcon: "rcon 75346866 "admin123" yb_difficulty" from "192.168.1.3:27005"
+L 01/21/2026 - 18:44:04: Rcon: "rcon 75346866 "admin123" yb fill team" from "192.168.1.3:27005"
+L 01/21/2026 - 18:44:04: "Dori<2><BOT><>" entered the game
+L 01/21/2026 - 18:44:04: "Dori<2><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:04: World triggered "Game_Commencing"
+L 01/21/2026 - 18:44:04: World triggered "Game_Commencing" (CT "0") (T "0")
+L 01/21/2026 - 18:44:04: World triggered "Round_End"
+L 01/21/2026 - 18:44:04: "butterfly<3><BOT><>" entered the game
+L 01/21/2026 - 18:44:04: "butterfly<3><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:04: "AfluffyKitten<4><BOT><>" entered the game
+L 01/21/2026 - 18:44:04: "AfluffyKitten<4><BOT><>" joined team "TERRORIST"
+L 01/21/2026 - 18:44:05: "cG PHAXD<5><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "cG PHAXD<5><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:05: Kick: "Dori<2><><>" was kicked by "Console"
+L 01/21/2026 - 18:44:05: "Dori<2><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:05: "Counter123<6><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "Counter123<6><BOT><>" joined team "TERRORIST"
+L 01/21/2026 - 18:44:05: "omega<7><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "omega<7><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:05: "Slayin<8><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "Slayin<8><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:05: "shooterman<9><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "shooterman<9><BOT><>" joined team "TERRORIST"
+L 01/21/2026 - 18:44:05: "bjaren<10><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "bjaren<10><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:05: "n0k<11><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "n0k<11><BOT><>" joined team "TERRORIST"
+L 01/21/2026 - 18:44:05: "blueguile<12><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "blueguile<12><BOT><>" joined team "TERRORIST"
+L 01/21/2026 - 18:44:05: "-CARDIAC-<13><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: "-CARDIAC-<13><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:05: ".e7`~Silent<14><BOT><>" entered the game
+L 01/21/2026 - 18:44:05: ".e7`~Silent<14><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:06: "hoop<15><BOT><>" entered the game
+L 01/21/2026 - 18:44:06: "hoop<15><BOT><>" joined team "TERRORIST"
+L 01/21/2026 - 18:44:06: "pimpjuice<16><BOT><>" entered the game
+L 01/21/2026 - 18:44:06: "pimpjuice<16><BOT><>" joined team "CT"
+L 01/21/2026 - 18:44:06: Kick: "butterfly<3><><>" was kicked by "Console"
+L 01/21/2026 - 18:44:06: "butterfly<3><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:07: "Counter123<6><BOT><TERRORIST>" triggered "Spawned_With_The_Bomb"
+L 01/21/2026 - 18:44:10: World triggered "Round_Start"
+L 01/21/2026 - 18:44:18: Rcon: "rcon 75346866 "admin123" changelevel de_dust2_fundo" from "192.168.1.3:27005"
+L 01/21/2026 - 18:44:18: "Counter123<6><BOT><TERRORIST>" triggered "Dropped_The_Bomb"
+L 01/21/2026 - 18:44:18: "Counter123<6><BOT><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: "AfluffyKitten<4><BOT><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: "cG PHAXD<5><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: "omega<7><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: "Slayin<8><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: "shooterman<9><BOT><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: "bjaren<10><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: "n0k<11><BOT><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: "blueguile<12><BOT><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: "-CARDIAC-<13><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: ".e7`~Silent<14><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: "hoop<15><BOT><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: "pimpjuice<16><BOT><CT>" disconnected
+L 01/21/2026 - 18:44:18: [META] ini: Begin re-reading plugins list: /opt/steam/hlds/cstrike/addons/metamod/plugins.ini
+L 01/21/2026 - 18:44:18: [META] ini: Read plugin config for: Reunion
+L 01/21/2026 - 18:44:18: [META] ini: Read plugin config for: AMX Mod X
+L 01/21/2026 - 18:44:18: [META] ini: Read plugin config for: YaPB
+L 01/21/2026 - 18:44:18: [META] ini: Finished reading plugins list: /opt/steam/hlds/cstrike/addons/metamod/plugins.ini; Found 3 plugins
+L 01/21/2026 - 18:44:18: [META] dll: Updating plugins...
+L 01/21/2026 - 18:44:18: [META] dll: Finished updating 4 plugins; kept 3, loaded 0, unloaded 0, reloaded 0, delayed 0
+L 01/21/2026 - 18:44:18: [META] dll: Rebuilding callbacks...
+L 01/21/2026 - 18:44:18: [META] dll: Callbacks rebuilded.
+L 01/21/2026 - 18:44:18: "quantux<1><STEAM_0:1:101622284><TERRORIST>" disconnected
+L 01/21/2026 - 18:44:18: World triggered "Round_Draw" (CT "0") (T "0")
+L 01/21/2026 - 18:44:18: World triggered "Round_End"
+L 01/21/2026 - 18:44:18: Log file closed
