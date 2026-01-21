@@ -6,7 +6,7 @@ Para rodar o projeto:
   - docker compose up -d
 
 ---
-# Ao iniciar o jogo, coloque a senha para entrar no server:
+# Ao iniciar o jogo, coloque a senha e entre no server:
 password ggwp
 connect <ip>
 
