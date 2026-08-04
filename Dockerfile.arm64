@@ -74,8 +74,20 @@ COPY --chown=steam:steam dependencies /opt/dependencies
 RUN mv /opt/dependencies/lib/hlds.install /opt/steam
 
 # 6. SteamCMD + base HLDS (motor base) - executado sob Box86
+#    O steamcmd, na primeira execucao, baixa a propria atualizacao e retorna o
+#    codigo MAGIC_RESTART_EXITCODE=42 para o wrapper "reinicia-lo" (comportamento
+#    do steamcmd.sh). Executamos o binario direto sob Box86 (o script .sh nao roda
+#    sob emulacao), entao tratamos o 42 reiniciando a execucao, e propagamos
+#    qualquer outro erro real.
 RUN tar xzf /opt/dependencies/steamcmd_linux.tar.gz && \
-    box86 ./linux32/steamcmd +runscript hlds.install && \
+    while :; do \
+        box86 ./linux32/steamcmd +runscript hlds.install; \
+        rc=$?; \
+        [ "$rc" -eq 42 ] && continue; \
+        [ "$rc" -eq 0 ] && break; \
+        echo "steamcmd falhou com codigo $rc"; \
+        exit "$rc"; \
+    done && \
     rm steamcmd.sh
 
 # 7. ReHLDS (binarios do servidor, x86 - emulados por Box86)
