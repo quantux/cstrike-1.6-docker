@@ -1,58 +1,96 @@
-# Servidor Docker de CS 1.6
-### Para rodar o projeto:
-Clonar com: <br>
+# Servidor Docker de CS 1.6 (ReHLDS)
+
+Imagem multi-plataforma para CS 1.6:
+
+- **linux/amd64** — roda nativamente (binários x86-32).
+- **linux/arm64** — roda os mesmos binários x86 sob o emulador **Box86** (x86 -> ARM), compilado durante o build.
+
+## Estrutura / fluxo de dados
+
+| Componente | Onde vive | Detalhe |
+|---|---|---|
+| Engine (ReHLDS), steamcmd, Metamod | **Na imagem** | Imagem enxuta, sem conteúdo pesado |
+| Conteúdo do jogo (mapas, addons, configs) | **Bind-mount `./cstrike`** | Editável sem rebuild |
+| Base mínima de fallback | `cstrike-base` na imagem | Semear o `./cstrike` se vier vazio |
+
+O `./cstrike/` é montado como volume: para adicionar/remover **mapas**, basta
+editar a pasta e reiniciar o container — **sem rebuild da imagem**.
+
+## Pré-requisitos
+
+- Docker com **Buildx** habilitado (default nas versões recentes).
+- Para build/execução **arm64**: uma máquina ARM64 real (Raspberry Pi, NAS, nuvem ARM).
+
+## Uso rápido
+
+```bash
 git clone https://github.com/quantux/cstrike-1.6-docker
-<br><br>
-Rodar com: <br>
-docker compose up -d
+cd cstrike-1.6-docker
 
-### Suporte a ARM64 (aarch64):
-O projeto original usa binários x86 (32 bits) para o engine (ReHLDS) e todos os
-plugins (Metamod-R, AMX Mod X, YaPB etc.), que **não rodam nativamente** em
-processadores ARM64. Para isso, a imagem `linux/arm64` reutiliza esses mesmos
-binários e os executa sob o emulador **Box86** (x86 -> ARM), dentro de um
-container nativo aarch64. Os bots (YaPB) e todo o restante continuam funcionando
-idênticos ao x86, pois rodam no mesmo processo emulado.
+# amd64 (padrao)
+docker compose up -d --build
 
-- Base: `debian:bookworm-slim` (aarch64), com multiarch `armhf` (libs ARM32 que
-  o Box86 embrulha) e `i386` (libs x86 que o Box86 carrega emuladas).
-- O Box86 é compilado para aarch64 a partir do código-fonte durante o build.
-- O steamcmd é executado sob Box86 para baixar a base HLDS (mesmo fluxo do x86).
-- **ReHLDS 3.13.0.788 obrigatório** no caminho ARM64: a 3.14.x não sobe sob Box86
-  (erro `Can not retrive filesystem interface version 'VFileSystem009'.`).
-
-> **Use uma máquina ARM64 real** (Raspberry Pi, NAS com arm64, nuvem ARM etc.)
-> para build e execução. A compilação do Box86 roda de forma nativa e confiável
-> nessas máquinas.
-
-```
-docker compose -f docker-compose.arm64.yaml up -d --build
+# arm64
+PLATFORM=linux/arm64 TAG=arm64 docker compose up -d --build
 ```
 
-Ou, com build manual:
+Build multiarquitetura manual e envio ao Docker Hub:
 
-```
-docker buildx build --platform linux/arm64 -t cstrike-1.6-docker:arm64 .
-docker run -d --name cstrike-1.6-docker-arm64 \
-  -p 27015:27015 -p 27015:27015/udp \
-  -v "$(pwd)/cstrike:/opt/steam/hlds/cstrike" \
-  cstrike-1.6-docker:arm64 +map de_dust2 +maxplayers 16
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 \
+  -t quantux1/cstrike-1.6-docker:latest --push .
 ```
 
-### Ao iniciar o jogo, coloque a senha e entre no server:
-password ggwp<br>
-connect [ip]
+## Conectar
 
-### Para gerenciar o servidor:
-rcon_password admin123
+1. No jogo: **password `ggwp`**
+2. **connect `[ip]`**
 
-### Para gerenciar os bots:
-rcon yb fill team<br>
-rcon yb add t<br>
-rcon yb add ct<br>
-rcon yb kickall<br>
-rcon yb_difficulty # para ver a dificuldade atual<br>
-rcon yb_difficulty <0-4> # para setar a dificuldade<br>
+## Gerenciamento (via rcon)
 
-### Para mudar de mapa:
-rcon changelevel de_dust2_fundo
+`rcon_password admin123`
+
+| Ação | Comando |
+|---|---|
+| Preencher bots | `rcon yb fill team` |
+| Adicionar bot (T) | `rcon yb add t` |
+| Adicionar bot (CT) | `rcon yb add ct` |
+| Remover todos os bots | `rcon yb kickall` |
+| Ver dificuldade | `rcon yb_difficulty` |
+| Definir dificuldade (0-4) | `rcon yb_difficulty <0-4>` |
+| Mudar de mapa | `rcon changelevel de_dust2_fundo` |
+
+## Adicionar / remover mapas (sem rebuild)
+
+Os mapas vivem em `./cstrike/maps` (montado por volume):
+
+1. Copie o `.bsp` para `./cstrike/maps/` (ou remova o que não quer).
+2. (Opcional) edite `./cstrike/mapcycle.txt`.
+3. `docker compose restart cs-server`
+
+Não é preciso rebuildar a imagem.
+
+## Healthcheck
+
+O compose define um `healthcheck` que verifica o processo do servidor e o
+socket UDP em `27015`. Com `restart: unless-stopped`, o container é reiniciado
+automaticamente se ficar inacessível.
+
+## Versões fixadas (reproduitibilidade)
+
+| Dependência | Versão |
+|---|---|
+| Imagem base | `debian:bookworm-slim` (por digest) |
+| Box86 | `0.3.8` (checksum sha256 verificado) |
+| ReHLDS | `3.13.0.788` |
+| Metamod-R | `1.3.0.149` |
+
+> **ReHLDS 3.13.0.788 é obrigatório** no caminho ARM64: a 3.14.x não sobe sob
+> Box86 (`Can not retrive filesystem interface version 'VFileSystem009'.`).
+
+## Como a base é obtida
+
+`dependencies/lib/hlds.install` usa o **steamcmd** para baixar o HLDS base
+(app 90, branch `steam_legacy`). No amd64 o wrapper `steamcmd.sh` cuida do
+auto-restart (código 42); no arm64 o binário roda sob Box86 e o retry é feito
+no próprio `Dockerfile`. Os binários do engine/plugins vêm de `dependencies/`.

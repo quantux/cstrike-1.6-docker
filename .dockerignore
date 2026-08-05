@@ -1,3 +1,5 @@
 README.md
 .github
+.git
+# Conteudo do jogo fica no bind-mount (./cstrike), nao na imagem
 cstrike

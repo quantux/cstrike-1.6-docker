@@ -1,11 +1,37 @@
+# Compose unico para o servidor de CS 1.6 (ReHLDS).
+#
+# O build usa o mesmo Dockerfile para linux/amd64 (nativo) e linux/arm64
+# (via Box86). A plataforma de execucao e escolhida por env:
+#   PLATFORM=linux/amd64   (padrao, hosts x86_64)
+#   PLATFORM=linux/arm64   (Raspberry Pi, NAS arm64, etc.)
+#   TAG=latest|arm64       tag da imagem a usar/buildar
+#
+# Uso:
+#   docker compose up -d --build
+#   PLATFORM=linux/arm64 TAG=arm64 docker compose up -d --build
+
 services:
   cs-server:
-    image: quantux1/cstrike-1.6-docker:latest
+    image: quantux1/cstrike-1.6-docker:${TAG:-latest}
+    build:
+      context: .
+      platforms:
+        - ${PLATFORM:-linux/amd64}
     container_name: cstrike-1.6-docker
+    platform: ${PLATFORM:-linux/amd64}
     restart: unless-stopped
     ports:
       - "27015:27015"
       - "27015:27015/udp"
     volumes:
+      # Conteudo do jogo (mapas, addons, configs). Editavel sem rebuild:
+      # adicione/remova arquivos e reinicie o container.
       - ./cstrike:/opt/steam/hlds/cstrike
     command: ["+map", "de_dust2", "+maxplayers", "16"]
+    healthcheck:
+      # O processo do servidor esta vivo e a porta UDP esta aberta.
+      test: ["CMD-SHELL", "pgrep -f hlds_linux >/dev/null && bash -c 'exec 3<>/dev/udp/127.0.0.1/27015' >/dev/null 2>&1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
