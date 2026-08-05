@@ -18,8 +18,8 @@ editar a pasta e reiniciar o container — **sem rebuild da imagem**.
 
 ## Pré-requisitos
 
-- Docker com **Buildx** habilitado (default nas versões recentes).
-- Para build/execução **arm64**: uma máquina ARM64 real (Raspberry Pi, NAS, nuvem ARM).
+- Docker (a imagem já está publicada no Docker Hub, não precisa de Buildx).
+- Para execução **arm64**: uma máquina ARM64 real (Raspberry Pi, NAS, nuvem ARM).
 
 ## Uso rápido
 
@@ -28,18 +28,27 @@ git clone https://github.com/quantux/cstrike-1.6-docker
 cd cstrike-1.6-docker
 
 # amd64 (padrao)
-docker compose up -d --build
+docker compose up -d
 
 # arm64
-PLATFORM=linux/arm64 TAG=arm64 docker compose up -d --build
+PLATFORM=linux/arm64 TAG=arm64 docker compose up -d
 ```
 
-Build multiarquitetura manual e envio ao Docker Hub:
+A imagem `quantux1/cstrike-1.6-docker:latest` (e `:arm64`) é puxada do
+**Docker Hub**, sem build local.
+
+## Build manual da imagem (para contribuir/manter)
+
+Para quem quiser buildar e publicar a imagem multiarquitetura:
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
   -t quantux1/cstrike-1.6-docker:latest --push .
 ```
+
+Para o build de arm64, são necessários Docker com Buildx e uma máquina ARM64
+real (ou `docker buildx build --push --platform linux/arm64` em um host com
+QEMU/emulação arm64).
 
 ## Conectar
 

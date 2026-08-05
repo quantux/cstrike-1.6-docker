@@ -1,22 +1,19 @@
 # Compose unico para o servidor de CS 1.6 (ReHLDS).
 #
-# O build usa o mesmo Dockerfile para linux/amd64 (nativo) e linux/arm64
-# (via Box86). A plataforma de execucao e escolhida por env:
+# A imagem e puxada do Docker Hub (quantux1/cstrike-1.6-docker) — multiplataforma
+# para linux/amd64 (nativo) e linux/arm64 (via Box86). A plataforma de execucao
+# e escolhida por env:
 #   PLATFORM=linux/amd64   (padrao, hosts x86_64)
 #   PLATFORM=linux/arm64   (Raspberry Pi, NAS arm64, etc.)
-#   TAG=latest|arm64       tag da imagem a usar/buildar
+#   TAG=latest|arm64       tag da imagem a usar
 #
 # Uso:
-#   docker compose up -d --build
-#   PLATFORM=linux/arm64 TAG=arm64 docker compose up -d --build
+#   docker compose up -d
+#   PLATFORM=linux/arm64 TAG=arm64 docker compose up -d
 
 services:
   cs-server:
     image: quantux1/cstrike-1.6-docker:${TAG:-latest}
-    build:
-      context: .
-      platforms:
-        - ${PLATFORM:-linux/amd64}
     container_name: cstrike-1.6-docker
     platform: ${PLATFORM:-linux/amd64}
     restart: unless-stopped
