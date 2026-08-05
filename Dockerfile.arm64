@@ -91,10 +91,13 @@ RUN tar xzf /opt/dependencies/steamcmd_linux.tar.gz && \
     rm steamcmd.sh
 
 # 7. ReHLDS (binarios do servidor, x86 - emulados por Box86)
-RUN unzip -o /opt/dependencies/rehlds-bin-3.14.0.857.zip -d /opt/steam/hlds && \
-    unzip -o -j /opt/dependencies/rehlds-bin-3.14.0.857.zip "bin/linux32/*" -d /opt/steam/hlds && \
-    unzip -o -j /opt/dependencies/rehlds-bin-3.14.0.857.zip "bin/linux32/valve/*" -d /opt/steam/hlds && \
-    rm /opt/dependencies/rehlds-bin-3.14.0.857.zip
+#    ATENCAO: usa a versao 3.13.0.788, pois a 3.14.x retorna
+#    "Can not retrive filesystem interface version 'VFileSystem009'." sob Box86
+#    (ver rehlds/ReHLDS#1130 e ptitSeb/box86#1027).
+RUN unzip -o /opt/dependencies/rehlds-bin-3.13.0.788.zip -d /opt/steam/hlds && \
+    unzip -o -j /opt/dependencies/rehlds-bin-3.13.0.788.zip "bin/linux32/*" -d /opt/steam/hlds && \
+    unzip -o -j /opt/dependencies/rehlds-bin-3.13.0.788.zip "bin/linux32/valve/*" -d /opt/steam/hlds/valve/dlls && \
+    rm /opt/dependencies/rehlds-bin-3.13.0.788.zip
 
 # 8. Steam SDK fix
 RUN mkdir -p ~/.steam && ln -s /opt/steam/linux32 ~/.steam/sdk32

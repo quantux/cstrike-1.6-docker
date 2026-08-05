@@ -18,6 +18,8 @@ idênticos ao x86, pois rodam no mesmo processo emulado.
   o Box86 embrulha) e `i386` (libs x86 que o Box86 carrega emuladas).
 - O Box86 é compilado para aarch64 a partir do código-fonte durante o build.
 - O steamcmd é executado sob Box86 para baixar a base HLDS (mesmo fluxo do x86).
+- **ReHLDS 3.13.0.788 obrigatório** no caminho ARM64: a 3.14.x não sobe sob Box86
+  (erro `Can not retrive filesystem interface version 'VFileSystem009'.`).
 
 > **Use uma máquina ARM64 real** (Raspberry Pi, NAS com arm64, nuvem ARM etc.)
 > para build e execução. A compilação do Box86 roda de forma nativa e confiável
