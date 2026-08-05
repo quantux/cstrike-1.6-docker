@@ -24,6 +24,29 @@ if [ ! -d "$HLDS_DIR/cstrike" ] || [ -z "$(ls -A "$HLDS_DIR/cstrike" 2>/dev/null
     fi
 fi
 
+# Senhas (RCON / entrada) definidas em .env e passadas via compose.
+# Sao aplicadas no server.cfg em runtime — editar o .env nao exige rebuild.
+CONFIG="$HLDS_DIR/cstrike/server.cfg"
+
+apply_password() {
+    local key="$1" value="$2"
+    if [ -n "$value" ]; then
+        local value_escaped
+        value_escaped=$(printf '%s' "$value" | sed 's/[\\&|]/\\&/g')
+        if grep -qE "^${key} " "$CONFIG"; then
+            sed -i "s|^${key} .*|${key} \"${value_escaped}\"|" "$CONFIG" \
+                || echo "aviso: nao foi possivel atualizar ${key} em ${CONFIG}"
+        else
+            printf '%s "%s"\n' "$key" "$value" >> "$CONFIG" \
+                || echo "aviso: nao foi possivel adicionar ${key} em ${CONFIG}"
+        fi
+    fi
+    return 0
+}
+
+apply_password rcon_password "$RCON_PASSWORD"
+apply_password sv_password "$SV_PASSWORD"
+
 # Executa o servidor: Box86 (arm64) ou nativo (amd64)
 if command -v box86 >/dev/null 2>&1; then
     exec box86 ./hlds_linux -game cstrike "$@"

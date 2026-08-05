@@ -17,6 +17,11 @@ services:
     container_name: cstrike-1.6-docker
     platform: ${PLATFORM:-linux/amd64}
     restart: unless-stopped
+    environment:
+      # Senhas injetadas no server.cfg pelo entrypoint.
+      # Valores de exemplo: troque localmente e NAO commite as reais.
+      RCON_PASSWORD: "admin123"
+      SV_PASSWORD: "ggwp"
     ports:
       - "27015:27015"
       - "27015:27015/udp"

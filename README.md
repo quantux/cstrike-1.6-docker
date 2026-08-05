@@ -37,6 +37,30 @@ PLATFORM=linux/arm64 TAG=arm64 docker compose up -d
 A imagem `quantux1/cstrike-1.6-docker:latest` (e `:arm64`) é puxada do
 **Docker Hub**, sem build local.
 
+## Senhas (RCON / entrada)
+
+As senhas ficam hardcoded no `docker-compose.yaml` (variáveis `RCON_PASSWORD`
+e `SV_PASSWORD`), com valores de exemplo `admin123`/`ggwp`. O entrypoint as
+injeta no `server.cfg` a cada start.
+
+Para usar as reais: edite o compose localmente e aplique — **sem rebuild**:
+
+```bash
+docker compose up -d
+```
+
+> Aviso: `docker-compose.yaml` é versionado no git. Troque os valores
+> localmente e **não commite** as senhas reais — commit apenas os exemplos.
+
+## Conectar
+
+1. No jogo: **password `$SV_PASSWORD`**
+2. **connect `[ip]`**
+
+## Gerenciamento (via rcon)
+
+`rcon_password $RCON_PASSWORD`
+
 ## Build manual da imagem (para contribuir/manter)
 
 Para quem quiser buildar e publicar a imagem multiarquitetura:
@@ -49,15 +73,6 @@ docker buildx build --platform linux/amd64,linux/arm64 \
 Para o build de arm64, são necessários Docker com Buildx e uma máquina ARM64
 real (ou `docker buildx build --push --platform linux/arm64` em um host com
 QEMU/emulação arm64).
-
-## Conectar
-
-1. No jogo: **password `ggwp`**
-2. **connect `[ip]`**
-
-## Gerenciamento (via rcon)
-
-`rcon_password admin123`
 
 | Ação | Comando |
 |---|---|
