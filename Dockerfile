@@ -77,6 +77,12 @@ RUN groupadd -r steam && useradd -r -u 1000 -g steam -m -d /opt/steam steam
 RUN mkdir -p /opt/steam/hlds /opt/dependencies && \
     chown -R steam:steam /opt/steam /opt/dependencies
 
+# 4b. Cliente RCON de terminal (UDP, GoldSrc): exposto como comando global
+#     `rcon` dentro do container para trocar de mapa / controlar bots etc.
+#     Instalado aqui (ainda como root) para poder escrever em /usr/local/bin.
+COPY rcon.py /usr/local/bin/rcon.py
+RUN chmod +x /usr/local/bin/rcon.py && ln -sf /usr/local/bin/rcon.py /usr/local/bin/rcon
+
 USER steam
 WORKDIR /opt/steam
 
@@ -130,11 +136,6 @@ RUN cp -a /opt/steam/hlds/cstrike /opt/steam/cstrike-base
 # 11. Entrypoint unico (native x86_64 usa hlds_run; arm64 usa box86 + hlds_linux)
 COPY --chown=steam:steam entrypoint.sh /opt/steam/entrypoint.sh
 RUN chmod +x /opt/steam/entrypoint.sh
-
-# 12. Cliente RCON de terminal (UDP, GoldSrc): exposto como comando global
-#     `rcon` dentro do container para trocar de mapa / controlar bots etc.
-COPY --chown=steam:steam rcon.py /usr/local/bin/rcon.py
-RUN chmod +x /usr/local/bin/rcon.py && ln -sf /usr/local/bin/rcon.py /usr/local/bin/rcon
 
 WORKDIR /opt/steam/hlds
 RUN chmod +x hlds_run hlds_linux && echo 10 > steam_appid.txt
