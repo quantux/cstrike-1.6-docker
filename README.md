@@ -43,6 +43,20 @@ As senhas ficam hardcoded no `docker-compose.yaml` (variáveis `RCON_PASSWORD`
 e `SV_PASSWORD`), com valores de exemplo `admin123`/`ggwp`. O entrypoint as
 injeta no `server.cfg` a cada start.
 
+## Variáveis de jogo (MP_*)
+
+As cvar's de regra de jogo e rotação podem ser definidas como variáveis
+diretas no compose (`MP_TIMELIMIT`, `MP_MAXROUNDS`, `MP_WINLIMIT`,
+`MP_BUYTIME`, `MP_FREEZETIME`). O entrypoint:
+
+- copia `./cstrike/server.cfg.bkp` (template com os padrões do CS 1.6) para
+  `server.cfg` a cada start;
+- aplica por cima apenas as variáveis `MP_*` **definidas** (não vazias);
+- mantém os valores do template para as que você não definiu.
+
+> `MP_BUYTIME` é em **minutos** (padrão `1.5` = 90s). Para outra cvar qualquer,
+> edite o template `cstrike/server.cfg.bkp`.
+
 Para usar as reais: edite o compose localmente e aplique — **sem rebuild**:
 
 ```bash

@@ -1,0 +1,58 @@
+// Template padrao do CS 1.6 (ReHLDS).
+//
+// Este arquivo (server.cfg.bkp) e usado como base: a cada start o entrypoint
+// o copia para server.cfg e aplica por cima apenas as variaveis MP_* que
+// estiverem DEFINIDAS no docker-compose (as ausentes permanecem nestes
+// valores padroes).
+//
+// Variaveis gerenciadas pelo compose:
+//   MP_TIMELIMIT  = minutos por mapa (0 = sem limite)
+//   MP_MAXROUNDS  = rodadas por mapa (0 = sem limite)
+//   MP_WINLIMIT   = vitorias p/ encerrar (0 = sem limite)
+//   MP_BUYTIME    = tempo de compra, em MINUTOS (padrao 1.5 = 90s)
+//   MP_FREEZETIME = congelamento antes do round, em segundos
+//
+// Para alterar o comportamento padrao, edite as variaveis no compose (nao
+// este template). Outras cvars podem ser alteradas diretamente aqui.
+
+hostname "CS 1.6 Server"
+
+// Configuracoes de Rede (Essencial para nao lagar no Docker)
+sv_lan 0
+sv_region 255
+
+// Content consistency (conteudo customizado)
+mp_consistency 0
+sv_consistency 0
+sys_ticrate 1000
+fps_max 0
+sv_maxrate 100000
+sv_minrate 25000
+sv_maxupdaterate 102
+sv_minupdaterate 30
+
+// Regras de Jogo
+mp_timelimit 0
+mp_maxrounds 0
+mp_winlimit 0
+mp_freezetime 6
+mp_roundtime 5
+mp_buytime 1.5
+mp_autokick 0
+mp_c4timer 35
+mp_startmoney 800
+mp_autoteambalance 1
+mp_limitteams 1
+mp_friendlyfire 0
+
+// Logs e Seguranca
+pausable 0
+log on
+sv_logbans 1
+sv_logecho 1
+sv_logfile 1
+allow_upload 1
+allow_download 1
+
+// Executar configuracoes de Bots (YaPB)
+exec addons/yapb/conf/yapb.cfg

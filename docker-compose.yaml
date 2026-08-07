@@ -13,15 +13,14 @@
 
 services:
   cs-server:
-    image: quantux1/cstrike-1.6-docker:${TAG:-latest}
-    container_name: cstrike-1.6-docker
-    platform: ${PLATFORM:-linux/amd64}
-    restart: unless-stopped
+    image: quantux1/cstrike-1.6-docker:latest
+    container_name: cs-server
+    restart: no
     environment:
       # Senhas injetadas no server.cfg pelo entrypoint.
       # Valores de exemplo: troque localmente e NAO commite as reais.
       RCON_PASSWORD: "admin123"
-      SV_PASSWORD: "ggwp"
+      SV_PASSWORD: ""
       # Regras de jogo / rotacao de mapa.
       # Por padrao (valores 0) cada mapa dura para sempre e o servidor so
       # troca de mapa manualmente (via RCON `changelevel` ou restart).
@@ -44,6 +43,13 @@ services:
       MP_TIMELIMIT: "0"
       MP_MAXROUNDS: "0"
       MP_WINLIMIT: "0"
+      # Tempo de preparo do round:
+      #   MP_BUYTIME     = tempo de compra de armas, em MINUTOS (default 1.5 = 90s).
+      #   MP_FREEZETIME  = congelamento antes de soltar, em segundos.
+      MP_BUYTIME: "1.5"
+      MP_FREEZETIME: "5"
+      # Observacao: se alguma variavel MP_* acima for removida (ou deixada vazia)
+      # daqui, o valor padrao do template ./cstrike/server.cfg.bkp e mantido.
       # MAP_CYCLE: lista de mapas (separados por espaco) que definira o
       # ./cstrike/mapcycle.txt. Se deixado VAZIO, mantem o mapcycle.txt que
       # ja existe no volume (nao mexe nele).
@@ -64,3 +70,4 @@ services:
       timeout: 5s
       retries: 3
       start_period: 30s
+

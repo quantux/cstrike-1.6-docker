@@ -27,6 +27,15 @@ fi
 # Senhas (RCON / entrada) definidas em .env e passadas via compose.
 # Sao aplicadas no server.cfg em runtime — editar o .env nao exige rebuild.
 CONFIG="$HLDS_DIR/cstrike/server.cfg"
+CONFIG_TEMPLATE="$HLDS_DIR/cstrike/server.cfg.bkp"
+
+# Regera o server.cfg a partir do template (server.cfg.bkp) a cada start.
+# Assim qualquer edicao manual no server.cfg e descartada e o arquivo sempre
+# parte dos valores padroes do template. Se nao houver template, usa o
+# server.cfg existente.
+if [ -f "$CONFIG_TEMPLATE" ]; then
+    cp "$CONFIG_TEMPLATE" "$CONFIG"
+fi
 
 apply_cvar() {
     local key="$1" value="$2"
@@ -48,15 +57,26 @@ apply_cvar() {
     return 0
 }
 
+# Aplica uma cvar apenas se a variavel de ambiente indicada for NAO VAZIA.
+# Se vazia/ausente, mantem o valor do template (server.cfg.bkp).
+apply_if_set() {
+    local key="$1"
+    local env_name="$2"
+    if [ -n "${!env_name}" ]; then
+        apply_cvar "$key" "${!env_name}"
+    fi
+}
+
 apply_cvar rcon_password "$RCON_PASSWORD"
 apply_cvar sv_password "$SV_PASSWORD"
 
-# Regras de jogo / rotacao de mapas configuraveis via env (compose).
-# Default: mapa dura para sempre (sem tempo/rounds/vitorias). Para ciclo
-# automatico, defina um limite > 0 e o MAPCYCLE desejado.
-apply_cvar mp_timelimit "$MP_TIMELIMIT"
-apply_cvar mp_maxrounds "$MP_MAXROUNDS"
-apply_cvar mp_winlimit "$MP_WINLIMIT"
+# Regras de jogo / rotacao de mapas. Apenas as variaveis MP_* definidas no
+# compose sao aplicadas; as ausentes mantem o padrao do template.
+apply_if_set mp_timelimit MP_TIMELIMIT
+apply_if_set mp_maxrounds MP_MAXROUNDS
+apply_if_set mp_winlimit MP_WINLIMIT
+apply_if_set mp_buytime MP_BUYTIME
+apply_if_set mp_freezetime MP_FREEZETIME
 
 # Rotacao de mapas: se MAPCYCLE for fornecido, semeia o mapcycle.txt.
 # Ex.: "de_dust2 de_aztec de_dust" (mapas espacados por espaco)
