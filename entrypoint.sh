@@ -40,6 +40,10 @@ apply_password() {
             printf '%s "%s"\n' "$key" "$value" >> "$CONFIG" \
                 || echo "aviso: nao foi possivel adicionar ${key} em ${CONFIG}"
         fi
+    else
+        # Valor vazio: remove qualquer senha existente para abrir o servidor.
+        sed -i "/^${key} .*/d" "$CONFIG" \
+            || echo "aviso: nao foi possivel remover ${key} em ${CONFIG}"
     fi
     return 0
 }
