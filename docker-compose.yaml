@@ -22,6 +22,33 @@ services:
       # Valores de exemplo: troque localmente e NAO commite as reais.
       RCON_PASSWORD: "admin123"
       SV_PASSWORD: "ggwp"
+      # Regras de jogo / rotacao de mapa.
+      # Por padrao (valores 0) cada mapa dura para sempre e o servidor so
+      # troca de mapa manualmente (via RCON `changelevel` ou restart).
+      #
+      # Para ciclo automatico: defina pelo menos UM limite abaixo como > 0
+      # e preencha a MAP_CYCLE com os mapas desejados (todos devem ter o
+      # arquivo .bsp em ./cstrike/maps/). O ciclo usa o primeiro mapa como
+      # inicial.
+      #
+      #   MP_TIMELIMIT  = max. de MINUTOS por mapa (ex.: "15" = 15 min).
+      #   MP_MAXROUNDS  = max. de rodadas por mapa (ex.: "20").
+      #   MP_WINLIMIT   = mapas vencidos p/ encerrar a partida (ex.: "8").
+      #                   (o que acontecer primeiro encerra o mapa)
+      #
+      # Ex. rotacao automatica:
+      #   MP_TIMELIMIT: "15"                       -> 15 min por mapa
+      #   MP_MAXROUNDS: "0"                        # rounds ilimitados
+      #   MP_WINLIMIT: "0"                         # sem limite de vitorias
+      #   MAP_CYCLE: "de_dust2 de_inferno de_nuke" # ordem de rotacao
+      MP_TIMELIMIT: "0"
+      MP_MAXROUNDS: "0"
+      MP_WINLIMIT: "0"
+      # MAP_CYCLE: lista de mapas (separados por espaco) que definira o
+      # ./cstrike/mapcycle.txt. Se deixado VAZIO, mantem o mapcycle.txt que
+      # ja existe no volume (nao mexe nele).
+      # Ex.: "de_dust2 de_aztec de_dust"
+      MAP_CYCLE: ""
     ports:
       - "27015:27015"
       - "27015:27015/udp"

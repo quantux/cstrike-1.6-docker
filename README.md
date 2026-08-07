@@ -61,6 +61,29 @@ docker compose up -d
 
 `rcon_password $RCON_PASSWORD`
 
+### RCON pelo terminal (fora do jogo)
+
+O projeto inclui `rcon.py`, um cliente RCON (UDP) que roda no terminal do
+host, sem entrar no jogo. Útil quando se tem acesso por SSH (ex.: Raspberry Pi).
+
+**Dentro do container** o script ja e instalado como comando global `rcon`
+(exige rebuild da imagem para entrar na imagem):
+
+```bash
+docker exec -it cs-server bash
+rcon 127.0.0.1 27015 '<RCON_PASSWORD>' 'changelevel de_dust2_fundo'
+rcon 127.0.0.1 27015 '<RCON_PASSWORD>' 'yb add t'
+rcon 127.0.0.1 27015 '<RCON_PASSWORD>' 'yb kickall'
+```
+
+**Do host** (sem rebuild, usa o `rcon.py` da raiz ou do PYTHONPATH):
+
+```bash
+python3 rcon.py 127.0.0.1 27015 '<RCON_PASSWORD>' 'changelevel de_dust2_fundo'
+```
+
+> Requer apenas Python (sem dependencias). A senha e a mesma `RCON_PASSWORD` do compose.
+
 ## Build manual da imagem (para contribuir/manter)
 
 Para quem quiser buildar e publicar a imagem multiarquitetura:

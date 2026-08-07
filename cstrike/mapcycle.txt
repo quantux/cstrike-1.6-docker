@@ -1,1 +1,10 @@
 de_dust2
+de_dust
+de_inferno
+de_nuke
+de_train
+de_aztec
+de_cbble
+de_prodigy
+de_vertigo
+de_dust2_fundo

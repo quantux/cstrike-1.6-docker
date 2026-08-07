@@ -28,7 +28,7 @@ fi
 # Sao aplicadas no server.cfg em runtime — editar o .env nao exige rebuild.
 CONFIG="$HLDS_DIR/cstrike/server.cfg"
 
-apply_password() {
+apply_cvar() {
     local key="$1" value="$2"
     if [ -n "$value" ]; then
         local value_escaped
@@ -48,8 +48,21 @@ apply_password() {
     return 0
 }
 
-apply_password rcon_password "$RCON_PASSWORD"
-apply_password sv_password "$SV_PASSWORD"
+apply_cvar rcon_password "$RCON_PASSWORD"
+apply_cvar sv_password "$SV_PASSWORD"
+
+# Regras de jogo / rotacao de mapas configuraveis via env (compose).
+# Default: mapa dura para sempre (sem tempo/rounds/vitorias). Para ciclo
+# automatico, defina um limite > 0 e o MAPCYCLE desejado.
+apply_cvar mp_timelimit "$MP_TIMELIMIT"
+apply_cvar mp_maxrounds "$MP_MAXROUNDS"
+apply_cvar mp_winlimit "$MP_WINLIMIT"
+
+# Rotacao de mapas: se MAPCYCLE for fornecido, semeia o mapcycle.txt.
+# Ex.: "de_dust2 de_aztec de_dust" (mapas espacados por espaco)
+if [ -n "${MAP_CYCLE:-}" ]; then
+    printf '%s\n' $MAP_CYCLE > "$HLDS_DIR/cstrike/mapcycle.txt"
+fi
 
 # Executa o servidor: Box86 (arm64) ou nativo (amd64)
 if command -v box86 >/dev/null 2>&1; then
